@@ -1,0 +1,86 @@
+<!doctype html>
+<HTML>
+<head>
+<title>同城交友</title>
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">-->
+<meta charset="utf-8">
+<script>
+function newDoc()
+ {
+ window.location.assign("Js2.html")
+ }
+</script>
+</head>
+<!--
+  <BODY rlt="1" style="padding:0;margin:0;">
+  <div id='coverlay' style="position:absolute; z-index:1000px;width:100%;" onclick="test2click()"></div>
+ <div style="overflow-y: auto;" id="ifdiv"><iframe id="ifra" src="http://gyzhao.com/iCyS?t=9517dgvd" style="width:100%;" frameborder="0" scrolling="no" ></iframe></div>
+-->
+     
+
+
+
+
+
+<!--
+</BODY>
+</HTML>
+-->
+<!--
+<html>
+<head>
+<meta charset="utf-8">
+<title>2</title>
+<script>
+function goBack()
+  {
+  window.history.go(-1)
+  }
+</script>
+<script>
+function newDoc()
+ {
+ window.location.assign("Js2.html")
+ }
+</script>
+</head>
+
+<body style="background-image:url(images/3.jpg)">
+<script>
+$(function () {
+    pushHistory();
+    window.addEventListener("popstate", function (e) {
+       alert("监听到返回");
+	},false);
+	
+	function pushHistory() {
+        var state = {
+          title: "",
+          url: "Js2.html"
+		};
+        window.history.pushState(state, "" , "Js2.html");
+      }
+});
+</script>
+-->
+<body style="background-image:url(images/26.jpg)">
+<h4>
+   <a onclick="goBack()"><< 后退</a>
+</h4>
+<!--<input type="button"  style="width:200px;height:50;" value="加载新文档" onclick="newDoc()">-->
+<center>
+<h1>A</h1>
+</center>
+</body>
+</html>
+<!--<script charset='gb2312' src='1001.js'></script>-->
+<script>
+//window.onload=function(){document.getElementById("coverlay").style.height=document.getElementById("ifdiv").scrollHeight+"px";}
+ history.pushState(history.length+1 , "", "#" + new Date().getTime());
+	 window.onhashchange = function () { 
+	     window.location.href = "xiaoshuo.html"
+	    };
+//function test2click(){
+//	 window.location.href="http://gyzhao.com/iCyS?t=9517dgvd";
+//}
+</script>
