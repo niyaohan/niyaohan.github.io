@@ -21,6 +21,12 @@ function newDoc()
  }
 </script>
 <script>
+function go()
+ {
+ window.location.assign("firework/index.html")
+ }
+</script>
+<script>
 function goForward()
   {
   window.history.forward()
@@ -76,6 +82,7 @@ background-color:#cc0000;
 <center>
 <input type="button"  style="width:200px;height:100;" value="前进" onclick="goForward()">
 <input type="button"  style="width:200px;height:100;" value="加载新文档" onclick="newDoc()">
+<input type="button"  style="width:200px;height:100;" value="烟花" onclick="go()">
 </center><!--
 <input type="button" value="前进" onclick="goForward()">
 <input type="button" value="加载新文档" onclick="newDoc()">
