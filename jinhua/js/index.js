@@ -19,7 +19,7 @@ var c,
 	tick;
 var audio = document.createElement("audio");
 audio.preload="auto";
-audio.src = "music/520.mp3";
+audio.src = "music/2.mp3";
 function playSound() {
     audio.play();
 }
