@@ -17,7 +17,12 @@ var c,
 	branches,
 	startHue,
 	tick;
-
+var audio = document.createElement("audio");
+audio.preload="auto";
+audio.src = "music/520.mp3";
+function playSound() {
+    audio.play();
+}
 function rand( min, max ) {
 	return Math.random() * ( max - min ) + min;
 }
@@ -151,6 +156,7 @@ window.addEventListener( 'resize', reset );
 window.addEventListener( 'click', function() {
 	startHue += 60;
 	reset();
+	playSound();
 });
 
 init();
