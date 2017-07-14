@@ -98,7 +98,7 @@ Branch.prototype.draw = function() {
 function init() {
 	c = document.getElementById( 'c' );
 	ctx = c.getContext( '2d' );
-	startHue = 220;
+	startHue = 400;
 	branches = [];
 	reset();
 	loop();
@@ -154,7 +154,7 @@ function loop() {
 
 window.addEventListener( 'resize', reset );
 window.addEventListener( 'click', function() {
-	startHue += 60;
+// 	startHue += 60;
 	reset();
 	playSound();
 });
