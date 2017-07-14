@@ -65,7 +65,7 @@ Branch.prototype.step = function( i ) {
 		});
 		this.angle += rand( -this.spread, this.spread );
 		this.vel *= 0.99;
-		this.spread = this.vel * 0.04;
+		this.spread = this.vel * 0.1;
 		this.tick++;
 		this.hue += 0.3;
 	} else {
