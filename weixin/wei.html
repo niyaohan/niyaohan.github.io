@@ -4,23 +4,80 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>封神竞技</title>
+    <style>
+       a{
+		   color:white;
+          text-decoration: none;
+           }
+       a:visited {
+            text-decoration: none;
+          }
+       a :hover {
+		   color:red;
+             text-decoration: none;
+           }
+       a:active {
+		   color:deepskyblue;
+           text-decoration: none;
+        } 
+		input{
+			border:1px;
+			font-size: 16px; 
+			width:60%;height:35px;
+			background:#191818;
+			border-style:solid;
+			border-color: transparent;
+			border-bottom-color:deepskyblue;
+			color:white;
+		}
+		button{
+			border:1px;
+			font-size: 32px; 
+			width:60%;
+			height:40px;
+			color:white;
+			border-style:solid;
+			border-radius:5px;
+			border-color:deepskyblue;
+		}
+		li{
+			width:40%;
+			display: inline-block;
+		}
+	</style>
 </head>
 <body bgcolor="#191818">
 <div align="center">
 	<div>	
-		<img src="images/2.png" width="55%" height="20%">
+		<img src="images/3.png" width="55%" height="30%">
 	</div>
     <div class="" style="margin-top:5%;">
-    <input type="text" style="font-size:16px;color:white;width:60%;height:35px;background:#191818;border-style:solid;border-color: transparent;border-bottom-color:deepskyblue;" class="" placeholder="请输入手机号">
+    <input type="text" class="input" placeholder="请输入手机号">
     </div>
     <div class="" style="margin-top:5%;">
-        <input type="password" style="font-size:16px;color:white;width:60%;height:35px;background:#191818;border-style:solid;border-color: transparent;border-bottom-color:deepskyblue;" class="" placeholder="请输入密码">
+        <input type="password" class="input" placeholder="请输入密码">
     </div>
     <div class="" style="margin-top:5%;">
-        <button type="button" class="" style="font-size:32px;width:60%;height:40px;background:deepskyblue;color:white;border-style:solid;border-color:deepskyblue;">登录</button>
+        <button type="button" class="button" style="background:deepskyblue;">登录</button>
       </div>
     <div class="" style="margin-top:5%;">
-        <button type="button" class="" style="font-size:32px;width:60%;height:40px;background:#191818;color:white;border-style:solid;border-color:deepskyblue;">注册</button>
+        <button type="button" class="button" style="background:#191818;">注册</button>
+    </div>
+          <div style="margin-top:5%;">
+               <li style="float: left;padding-left:10%;">
+               	<a href="www.qq.com"><img src="images/QQ.png" width="20%" height="20%"></a>
+                	<p style="color:white;">QQ登录</p>
+               	</li>
+                <li style="float: right;padding-right:10%;">
+                	<a href="www.weixin.com"><img src="images/weixin.png" width="20%" height="20%"></a>
+                	<p style="color:white;">微信登录</p>
+                </li>
+          </div>
+    <div style="margin-top:5%;">
+    	<a href="" target="_blank">忘记密码？</a>
+    </div>
+    <div style="margin-bottom:5%;">
+    	
     </div>
 </div>
 </body>
