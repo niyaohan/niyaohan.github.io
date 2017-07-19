@@ -33,6 +33,8 @@ overflow:hidden;
 	li{
 	    display: inline-block;
 	}
+	#div1{display:black;width:100;height:20px;line-height:20px;white-space:nowrap;overflow:hidden;background-color:#312F2F;margin:15px;padding:5px 15px;}
+       span{display:inline-block;color:#fff;padding-right:10px;}
 	</style>
 </head>
 <body style="background:#000000">
@@ -57,9 +59,37 @@ overflow:hidden;
 	</li>
 </div>
 <div style="width:100%;height:3%;background:#312F2F;color:white;text-align: center;font-size: 14px;padding-bottom:5px;">
-	<img src="images/f.png">黑大帅：不服来战
+	<div id="div1" style="height:20px">
+        <span id="span1"><img src="images/f.png">黑大帅：不服来战      <img src="images/f.png"> 白大帅：好啊     <img src="images/f.png"> 黑大帅：不服来战</span>
+        <span id="span2"> </span>
+    </div>
+    <script>
+    var div,span,span2,i,timer;
+        function init(){
+            setInterval(ttb,100);
+        }
+        function ttb(){
+            div = getId('div1');
+            span = getId('span1');
+            span2 = getId('span2');
+            
+            span2.innerHTML = span.innerHTML;
+            if(span.offsetWidth <= div.scrollLeft){
+                div.scrollLeft -= span.offsetWidth;
+                
+            }
+            else {
+                div.scrollLeft++;
+            }
+            
+        }
+        function getId(Id){
+            return document.getElementById(Id);
+        }
+        window.onload = init();
+	</script>
 </div>
-<div style="width:100%;heigh t:;">
+<div style="width:100%;height:;">
 	<img src="images/12.png" style="width:100%;height:100%;">
 </div>
 <div style="width:100%;height:110px;">
