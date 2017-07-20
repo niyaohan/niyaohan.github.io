@@ -12,9 +12,78 @@
 		width:100%;
 		height:100%;
 	}
+	a{
+		text-decoration: none;
+	}
+    .wrap{
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+    /*清浮动---clearfix*/
+    .clearfix {
+      *zoom: 1;
+    }
+    .clearfix:after {
+      content: "";
+      clear: both;
+      display: block;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+    .blist {
+      border:1px solid #d9d9d9;
+	  border-color:transparent;
+      width: 100%;
+      height: 32px;
+    }
+    .blist li:first-child{
+      border-left: none;
+    }
+    .blist li{
+       list-style: none;
+       width: 19.7%;
+       height: 32px;
+       border-left:1px solid white;
+       font-size: 16px;
+       font-family: "";
+       line-height: 32px;
+       text-align: center;
+		color:white;
+       float: left;
+       /*鼠标样式改变为一个手*/
+       cursor: pointer;
+       /*字体免选中*/
+       -webkit-user-select: none;
+  
+    }
+    .blsit-list{
+      width: 100%;
+    }
+    .blsit-list li{
+       list-style: none;
+       width: 100%;
+       border-bottom-color: transparent;
+       height: 100%;
+       border-top: none;
+	   color:white;
+    }
+    .wrap .blist li.active{
+      font-weight: bold;
+      color: white;
+      border-bottom: 2px solid red;
+      position: relative;
+      top:-1px;
+      height: 31px;
+    }
+    .blsit-list li:first-child{
+      display: block;
+    }
+    .blsit-list li{
+     display: none;
+    }
 	</style>
 </head>
-
 <body style="background:#000000">
 <div style="background:black;height:50px;width:100%;margin-top:0px;">
 	<div style="width:20%;height:50px;float:left;padding-left: 4%;">
@@ -24,37 +93,18 @@
 		<p style="color:white;font-size: 20px;padding-top:14px;padding-left: 40%;">游戏代练</p>
 	</div>
 </div>
-<div style="width:100%;height:30px;background:#212121;border:1px solid ;border-color: transparent;">
-<ul>
-<li style="width:14%;height:30px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;border-bottom-color: #D1370C;">
-      <div style="width:36px;height:30x;margin: 4px auto;">
-       <p style="color:white;font-size: 18px;">首页</p></div>
-</li>
-<li style="width:29%;height:30px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;border-bottom-color:white;"><div style="width:72px;margin:4px auto;">
-	<p style="color:white;font-size: 18px;">发布管理</p>
-       </div>
-</li>
-<li style="width:12%;height:30px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;border-bottom-color:white;">
-       <div style="width:36px;margin:0px auto;">
-		   <p style="margin:4px auto;color:white;font-size: 18px;">接单</p>
-        </div>
- </li>
-<li style="width:29%;height:30px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;border-bottom-color:white;">
-       <div style="width:72px;margin:0px auto;"> 
-		   <p style="margin:4px auto;color:white;font-size: 18px;">接单管理</p>
-        </div>
-</li>
-<li style="width:13%;height:30px;display: inline;float:left;border:1px solid white;border-color: transparent;border-bottom-color:white;">
-     <div style="width:36px;margin:4px auto;">
-      <p style="float:right;color:white;font-size: 18px;">陪玩</p>
-      </div>
-</li>
-</ul>	
-</div>
-<div style="width:100%;height:40px;background:black;">
-	
-</div>
-<div style="width:50%;float:left;">
+<div class="wrap">
+       <ul class="blist clearfix" style="background:#666464;">
+         <li class="active">首页</li>
+         <li>发布管理</li>
+         <li>接单</li>
+         <li>接单管理</li>
+         <li>陪玩</li>
+       </ul>
+       <ul class="blsit-list">
+        <li>
+         <div style="width:100%;height:40px;background:black;"></div>
+    <div style="width:50%;float:left;">
 	<div style="width:90%;height:50px;floatpadding-left:2%;border:1px solid white;margin: 0px auto;">
 	<div style="width:96px;margin:15px auto;">
 	<p style="color:white;margin: auto;font-size: 16px;">我要发布订单</p>
@@ -150,14 +200,31 @@
 	</div>
 	</div>
 </div>
-<!-- <div style="width:100%;height:500px;">
-	
-</div> -->
-<div style="position: fixed;bottom: 0px; width:100%;height:55px;background:#666363;border:1px solid ;border-color: transparent;border-top-color:white;">
+</li>
+         <li>B</li>
+         <li>C</li>
+         <li>D</li>
+         <li>E</li>
+       </ul>
+    </div>
+    <script type="text/javascript" src="jquery-1.11.3/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+       $(".blist").on("click","li",function(){
+         // 设index为当前点击
+         var index = $(this).index();
+         // 点击添加样式利用siblings清除其他兄弟节点样式
+         $(this).addClass("active").siblings().removeClass("active");
+         // 同理显示与隐藏
+         $(this).parents(".wrap").find(".blsit-list li").eq(index).show().siblings().hide();
+       })
+    })
+	</script>
+	<div style="position: fixed;bottom: 0px; width:100%;height:55px;background:#666363;border:1px solid ;border-color: transparent;border-top-color:white;">
 <ul>
 <li style="width:49.2%;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;">
        <div style="width:115px;margin:0px auto;">
-       <a href=""><img src="images/5.png" style="margin:0 auto;width:80%;height:80%">
+       <a href=""><img src="images/5.png">
        </a></div>
 </li>
 <li style="width:49.2%;display: inline;float:left;border:1px solid ;border-color: transparent;"><div style="width:44px;margin:0px auto;">
