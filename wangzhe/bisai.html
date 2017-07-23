@@ -1,0 +1,168 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>比赛</title>
+<style>
+    	*{
+		margin: 0;padding: 0;
+	}
+		body{
+			width:100%;
+			height:100%;
+		}
+	a{
+		text-decoration: none;
+	}
+    .wrap{
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+    /*清浮动---clearfix*/
+    .clearfix {
+      *zoom: 1;
+    }
+    .clearfix:after {
+      content: "";
+      clear: both;
+      display: block;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+    .blist {
+      border:1px solid #d9d9d9;
+	  border-color:transparent;
+      width: 100%;
+      height: 32px;
+    }
+    .blist li:first-child{
+      border-left: none;
+    }
+    .blist li{
+       list-style: none;
+       width: 33%;
+       height: 32px;
+       border-left:1px solid white;
+       font-size: 16px;
+       font-family: "";
+       line-height: 32px;
+       text-align: center;
+		color:white;
+       float: left;
+       /*鼠标样式改变为一个手*/
+       cursor: pointer;
+       /*字体免选中*/
+       -webkit-user-select: none;
+  
+    }
+    .blsit-list{
+      width: 100%;
+    }
+    .blsit-list li{
+       list-style: none;
+       width: 100%;
+       border-bottom-color: transparent;
+       height: 100%;
+       border-top: none;
+	   color:white;
+    }
+    .wrap .blist li.active{
+      font-weight: bold;
+      color: white;
+      border-bottom: 2px solid red;
+      position: relative;
+      top:-1px;
+      height: 31px;
+    }
+    .blsit-list li:first-child{
+      display: block;
+    }
+    .blsit-list li{
+     display: none;
+    }
+	</style>
+</head>
+
+<body style="background:black;">
+<div style="background:black;height:50px;width:100%;margin-top:0px;font-size: 12px;text-align: center;display:inline-block;">
+	<li style="width:25%;height:50px;float:left;padding-top: 0px;">
+ 	 		<a href="" style="font-size: 25px;color:white;text-decoration: none;float:left;padding-left: 10%;padding-top: 8px;">＜</a>
+        </li>
+        <li style="width:50%;height:50px;padding-top: 0px;float:left;">
+        <img src="images/10.png" style="width:30px;height:40px;padding-top: 10px;">
+        </li>
+	<li style="width:25%;height:50px;float:right;margin-top:0px;text-align: center;">
+		<a href=""><img src="images/jia.png" style="width: 30px;height: 30px"></a>
+		<p style="color:white;">创建比赛</p>
+	</li>
+</div>
+<div class="wrap" style="padding-top: 7px;">
+       <ul class="blist clearfix" style="background:black;">
+         <li class="active">锦标赛</li>
+         <li>擂台赛</li>
+		   <li>挑战赛</li>
+       </ul>
+       <ul class="blsit-list">
+         <li>B</li>
+         <li>
+         	<div style="width:100%;height:30px;">
+         		
+         	</div>
+         	<div style="width:100%;height:40px;text-align: center;">
+         		<img src="images/12.png" style="width:300px;height:40px;">
+         	</div>
+         	<div style="width:100%;text-align: center;">
+         		<img src="images/20.png" style="width:100%;height:100%;">
+         	</div>
+         	<div style="width:100%;height:30px;background:#474747;text-align: center;padding-top:10px;">
+         		<p>聊天室</p>
+         	</div>
+         	<div style="width:100%;height:200px;position: relative;">
+         		<div style="width:100%;height:30px;margin-top: 10px;margin-left: 10px;">
+         			<img src="images/touxiang.png" style="width:30px;height:30px;"> <img src="images/1xing.png" style="width:50px;height:25px;">  &nbsp; <span style="margin-top: 8px;position: absolute;">你什么段位啊？</span>
+         		</div>
+         		<div style="width:100%;height:30px;margin-top: 10px;margin-left: 10px;">
+         			<img src="images/touxiang.png" style="width:30px;height:30px;"> <img src="images/9xing.png" style="width:50px;height:25px;">&nbsp; <img src="images/wangguan.png" style="width:35px;height:25px;"><span style="margin-top: 8px;position: absolute;">我王者！！</span>
+         		</div>
+         		<div style="position: absolute;bottom:0px;background:#313131;width:100%;height:50px;">
+					<a  href=""><img src="images/yuyinxiaoxi.png" style="width:35px;height:35px;margin-left: 3%;margin-top: 7px;"></a>  <a href=""><img src="images/jiahao.png" style="width:35px;height:35px;margin-left: 1%;margin-top: 7px;"></a>  <input type="text" style="width:60%;height:35px;margin-top: 5px;position: absolute;margin-left: 1%;background: #474747;border-color:transparent;"><button style="float:right;width:50px;height:35px;margin-top: 7px;font-size: 16px;margin-right: 2%;">发送</button>
+         		</div>
+         	</div>
+         </li> 
+		 <li>D</li>
+       </ul>
+    </div>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+       $(".blist").on("click","li",function(){
+         // 设index为当前点击
+         var index = $(this).index();
+         // 点击添加样式利用siblings清除其他兄弟节点样式
+         $(this).addClass("active").siblings().removeClass("active");
+         // 同理显示与隐藏
+         $(this).parents(".wrap").find(".blsit-list li").eq(index).show().siblings().hide();
+       })
+    })
+	</script>
+	<div style="position: fixed;bottom: 0px; width:100%;height:45px;background:#474747;border:1px solid ;border-color: transparent;border-top-color:white;">
+<ul>
+<li style="width:33%;height:45px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;">
+       <div style="width:40px;margin:0px auto;">
+       <a href=""><img src="images/14.png" style="width:40px;height:40px;">
+       </a></div>
+</li>
+<li style="width:30%;height:45px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;"><div style="width:40px;margin:0px auto;">
+       <a href=""><img src="images/15.png" style="width:40px;height:40px;">
+       </a></div>
+</li>
+<li style="width:33%;height:45px;display: inline;float:left;border:1px solid ;border-color: transparent;"><div style="width:40px;margin:0px auto;">
+       <a href=""><img src="images/16.png" style="width:40px;height:40px;">
+       </a></div>
+</li>
+</ul>	
+</div>
+</body>
+</html>
