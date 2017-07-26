@@ -1,0 +1,226 @@
+body {
+	background-color: #292929;
+}
+
+#wzrr {
+	width: 100%;
+}
+
+#x{
+	color: white;
+	background-color: #292929;
+	border-color: #292929;
+	float: right;
+	font-size: 50px;
+}
+#close {
+	color: white;
+	background-color: #393939;
+	border-color: #392929;
+	float: right;
+	font-size: 50px;
+	border:none;
+	border-radius: 50px;
+}
+
+#db {
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 65px;
+}
+
+#a {
+	float: left;
+	font-size: 50px;
+	color: white;
+}
+
+.div-inline {
+	display: inline;
+}
+
+#num {
+	border: 2px solid #292929;
+	width: 110px;
+	height: 80px;
+}
+
+#jia {
+	border: none;
+	width: 110px;
+	height: 80px;
+	border-top-right-radius: 14px;
+	border-bottom-right-radius: 14px;
+}
+
+#jian {
+	border: none;
+	width: 110px;
+	height: 80px;
+	border-top-left-radius: 14px;
+	border-bottom-left-radius: 14px;
+}
+
+.but {
+	float: right;
+	color: green;
+	font-size: 30px;
+	background-color: #494949;
+}
+
+#H {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100px;
+}
+
+#I {
+	position: absolute;
+	top: 83%;
+	display: table-cell;
+	vertical-align: middle;
+	height: 100px;
+	font-size: 50px;
+	color: white;
+}
+
+#SmartBar {
+	
+	display: block;
+}
+
+img {
+	width: 19.65%;
+}
+
+#ljdb {
+	color: black;
+	background-color: darkgreen;
+	width: 260px;
+	height: 60px;
+	border-radius: 10px;
+	border: none;
+	font-size: 55px;
+}
+
+
+
+.alieditContainer {
+	position: relative;
+}
+
+.alieditContainer .i-text {
+	position: absolute;
+	color: #fff; 
+	opacity: 0.2;
+	width: 80%;
+	height: 125px;
+	font-size: 12px;
+	left: 10%;
+	-webkit-user-select: initial;
+	/*取消禁用选择页面元素*/
+	z-index: 9;
+	padding: 0;
+	borde: 0;
+}
+
+.alieditContainer .sixDigitPassword {
+	width: 80%;
+	height: 100px;
+	cursor: text;
+	background: #black;
+	outline: none;
+	position: relative;
+	padding: 13px 0;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+}
+
+.alieditContainer .sixDigitPassword i {
+	width: 16%;
+	height: 100px;
+	float: left;
+	display: block;
+	padding: 4px 0;
+	border-left: 1px solid #cccccc;
+}
+
+.alieditContainer .sixDigitPassword i:first-child {
+	border-left: 0;
+}
+
+
+
+.alieditContainer .sixDigitPassword b {
+	display: block;
+	margin: 5px auto 4px auto;
+	width: 7px;
+	height: 7px;
+	overflow: hidden;
+	display: none;
+	/*visibility:hidden;*/
+	background: #000;
+	border-radius: 100%;
+	align-content: center;
+}
+
+.alieditContainer .sixDigitPassword .guangbiao {
+	width: 16%;
+	height: 100px;
+	position: absolute;
+	display: block;
+	left: 10%;
+	top: -1px;
+	visibility: visible;
+
+}
+
+.a-upload {
+    height: 100px;
+    width: 80%;
+    line-height: 100px;
+    position: relative;
+    cursor: pointer;
+    color: #888;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    text-align:center;
+    margin:0 auto;
+    display:block;
+}
+
+.a-upload  input {
+    position: absolute;
+    font-size: 200px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer
+}
+
+.a-upload:hover {
+    color: #444;
+    background: #eee;
+    border-color: #ccc;
+    text-decoration: none
+}
+.frame{border: 1px;
+	background-color: #393939;
+	position: fixed;
+	bottom: 260px;
+	color: white;
+	width: 900px;
+	height: 800px;
+    z-index: auto;
+    text-align: center;
+    border-radius: 50px;
+    left: 5%;
+	}
+
