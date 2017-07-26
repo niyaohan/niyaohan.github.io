@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>36</title>
+<script src="js/jquery-3.1.1.min.js"></script>
+<style>
+	*{margin: 0;padding: 0}
+	html,body{width: 100%;height: 100%;background-color: black;color: white;font-family: 微软雅黑;overflow: hidden}
+	
+	#top{width: 100%;height: 8%;text-align: center}
+	#top img{width: 45px;height: 45px;margin-top: 5px}
+	
+	#main{width: 100%;height: 85%}
+	#roll span{font-size: 12px;vertical-align: 6px}
+	#mainpic{width: 100%;height: 25%;background-image: url(images/wzry.jpg);background-size: cover;background-position: center}
+	#mainul{width: 100%;height: 7%;list-style: none;text-align: center;background-color: #1a1a1a}
+	#mainul li{width: 32%;height: 80%;top: 20%;position: relative;float: left;font-size: 16px}
+	.active{box-sizing: border-box;border-top: 1px solid #ff6600;background-color: black}
+	
+	#left1{width: 63%;height: 64%;float: left;margin-left: 1%;text-align: center;display: none}
+	#left2{width: 63%;height: 64%;float: left;margin-left: 1%}
+	#zuo{width: 48%;height: 100%;float: left}
+	#you{width: 48%;height: 100%;float: right}
+	#right{width: 34%;height: 64%;float: right;margin-right: 1%}
+	.item1,.item2{width: 100%;height: 27%;position: relative;margin-bottom: 15%;background-size: cover;background-position: center}
+	.item1{background-image: url(images/item1.jpg)}
+	.item2{background-image: url(images/item2.jpg)}
+	.item3{width: 94%;height: 22%;margin: 6% auto;background-image: url(images/item3.jpg);background-size: contain;background-position: center}
+	.duobao{width: 55%;height: 20%;position: absolute;bottom: -8px;right: 0;background-color:  darkgreen; border: 0;border-radius: 3px; font-size: 14px;font-weight: 600; color: white;}
+	
+	.duobao1{width: 55%;height: 20%;position: absolute;bottom: -8px;right: 0;background-color: #000000; border: 0;border-radius: 3px; font-size: 14px;font-weight: 600; color: #006400;}
+	
+	
+	
+	#foot{width: 100%;height: 7%;list-style: none;position: absolute;bottom: 0;background-color: #454545}
+	#foot li{width: 20%;height: 100%;float: left;text-align: center;box-sizing: border-box;border: 1px solid white}
+	li img{width: 35px;height: 35px;margin-top: 2px}
+	</style>
+</head>
+
+<body>
+<div id="top">
+	<img src="images/fenlei.jpg" style="position: absolute;left: 4%">
+	<img src="images/shangcheng.jpg">
+</div>
+<div id="main">
+    <marquee id="roll" direction="left" behavior="scroll" loop="-1" scrollamount="3" scrolldelay="10" align="middle" bgcolor="#1a1a1a" height="4%" width="100%" hspace="0" vspace="0" onmouseover="this.stop()" onmouseout="this.start()">
+        <p style="display: inline"><img src="images/laba.jpg" width="20" height="20"><span>黑大帅：不服来战</span></p>
+		<p style="display: inline;margin-left: 25%"><img src="images/laba.jpg" width="20" height="20"><span>白大帅: 哈哈，有种来啊</span></p>
+	</marquee>
+	<div id="mainpic"></div>
+	<ul id="mainul">
+		<li id="duihuan">兑换商品</li>
+		<li id="yiyuan" class="active">1元夺宝</li>
+		<li style="width: 36%"><p style="position: absolute;left: 15px">热卖商品</p></li>
+	</ul>
+	<div id="left1">
+	     <!--<p style="position: relative;top: 40%">抱歉~商品已售罄</p>-->
+	      <div id="zuo">
+        	<div class="item1" style="margin-top: 5%">
+        		<img src="images/item1.jpg" class="item1" style="height: 100%;">
+        		<font class="duobao1" style="font-size: 0.6em;">已销售124件</font>
+        	</div>
+			<div class="item1">
+				<button class="duobao1" style="font-size: 0.6em;">已销售124件</button>
+			</div>
+			<div class="item1">
+				<button class="duobao1" style="font-size: 0.6em;">已销售124件</button>
+			</div>
+        </div>
+	     
+	      <div id="you">
+           	<div class="item2" style="margin-top: 5%">
+           		<a href="http://123.56.217.209/shop/3940/3.5.html"><img src="images/item2.jpg" class="item2" style="height: 100%;"></a>
+           		<button class="duobao1" style="font-size: 0.6em;">已销售124件</button>
+           	</div>
+			<div class="item2">
+				
+				<a href="http://123.56.217.209/shop/3940/3.5.html"><img src="images/item2.jpg" class="item2" style="height: 100%;"></a>
+				
+				<button class="duobao1" style="font-size: 0.6em;">已销售124件</button>
+			</div>
+			<div class="item2">
+				
+				<a href="http://123.56.217.209/shop/3940/3.5.html"><img src="images/item2.jpg" class="item2" style="height: 100%;"></a>
+				
+				<button class="duobao1" style="font-size: 0.6em;">已销售124件</button>
+			</div>     	
+        </div>
+	     
+	     
+	</div>
+	
+	<div id="left2">
+        <div id="zuo">
+        	<div class="item1" style="margin-top: 5%">
+        		<button class="duobao" onclick="window.location.href=''" >立即夺宝</button>
+        	</div>
+			<div class="item1">
+				<button class="duobao"  onclick="window.location.href=''">立即夺宝</button>
+			</div>
+			<div class="item1">
+				<button class="duobao" onclick="window.location.href=''">立即夺宝</button>
+			</div>
+        </div>
+        <div id="you">
+           	<div class="item2" style="margin-top: 5%">
+           		<button class="duobao" onclick="window.location.href='http://123.56.217.209/shop/T71/index.html'">立即夺宝</button>
+           	</div>
+			<div class="item2">
+				<button class="duobao" onclick="window.location.href='http://123.56.217.209/shop/T71/index.html'">立即夺宝</button>
+			</div>
+			<div class="item2">
+				<button class="duobao" onclick="window.location.href='http://123.56.217.209/shop/T71/index.html'">立即夺宝</button>
+			</div>     	
+        </div>
+	</div>
+<ul id="right">
+		<div class="item3"></div>
+		<div class="item3"></div>
+		<div class="item3"></div>
+		<div class="item3"></div>
+</ul>
+</div>
+<ul id="foot">
+	<li><a href="http://biaogewudiaini.cn/zhenghe/74.html"><img src="images/saishi.jpg"></a></li>
+	<li><img src="images/zixun.jpg"></li>
+	<li><a href="http://123.56.217.209/shop/41/41.html"><img src="images/shop.jpg"></a></li>
+	<li><img src="images/jingcai.jpg"></li>
+	<li><a href="http://www.asgardusk.com/yao/31.html"><img src="images/i.jpg"></a></li>
+</ul>
+<script>
+	$("#duihuan").click(function(){
+		$("#left1").show();
+		$("#left2").hide();
+		$(this).addClass("active");
+		$("#yiyuan").removeClass("active");
+	});
+	$("#yiyuan").click(function(){
+		$("#left2").show();
+		$("#left1").hide();
+		$(this).addClass("active");
+		$("#duihuan").removeClass("active");
+	});
+	</script>
+</body>
+</html>
