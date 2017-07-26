@@ -17,6 +17,12 @@
        })
     })
 	</script>
+	<script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
 <style>
     	*{
 		margin: 0;padding: 0;
@@ -161,7 +167,7 @@ button{
 	<body style="background:black;">
 <div style="background:black;height:40px;width:100%;margin-top:0px;font-size: 12px;text-align: center;display:inline-block;">
 	<li style="width:25%;height:40px;float:left;padding-top: 0px;">
- 	 		<a href="" style="font-size: 25px;color:white;text-decoration: none;float:left;padding-left: 10%;padding-top: 8px;">＜</a>
+ 	 		<a onclick="goBack()" style="font-size: 25px;color:white;text-decoration: none;float:left;padding-left: 10%;padding-top: 8px;">＜</a>
         </li>
         <li style="width:50%;height:40px;padding-top: 0px;float:left;">
         <img src="images/10.png" style="width:30px;height:40px;padding-top: 5px;">
