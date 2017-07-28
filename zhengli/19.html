@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>设置</title>
+    <link rel="stylesheet" type="text/css" href="css/switch-buttons.css">
+<!--    <link rel="stylesheet" type="text/css" href="css/style.css">-->
+    <style>
+    	*{
+		margin: 0;padding: 0;
+	}
+		body{
+			margin:0px;
+			width:100%;
+			height:100%;
+		}
+    	li{
+    		display:inline-block;
+    	}
+		.roundedTwo {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin: 6px auto;
+  background: #fcfff4;
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedTwo label {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  border:1px solid white;
+  background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedTwo label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*
+.roundedTwo label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+*/
+}
+.roundedTwo input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedTwo input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+		.roundedTwo1 {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin: 6px auto;
+  background: #fcfff4;
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedTwo1 label {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  border:1px solid white;
+  background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedTwo1 label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*
+.roundedTwo1 label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+*/
+.roundedTwo1 input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedTwo1 input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+		.roundedTwo2 {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin: 6px auto;
+  background: #fcfff4;
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedTwo2 label {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  border:1px solid white;
+  background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedTwo2 label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*
+.roundedTwo2 label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+*/
+.roundedTwo2 input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedTwo2 input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+		.roundedTwo3 {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin: 6px auto;
+  background: #fcfff4;
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedTwo3 label {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  border:1px solid white;
+  background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedTwo3 label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*
+.roundedTwo3 label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+*/
+.roundedTwo3 input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedTwo3 input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+		.roundedTwo4 {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  margin: 6px auto;
+  background: #fcfff4;
+  background: -moz-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: -webkit-linear-gradient(top, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  background: linear-gradient(to bottom, #fcfff4 0%, #dfe5d7 40%, #b3bead 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 1px 1px white, 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+.roundedTwo4 label {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  cursor: pointer;
+  border:1px solid white;
+  background: -moz-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: -webkit-linear-gradient(top, #222222 0%, #45484d 100%);
+  background: linear-gradient(to bottom, #222222 0%, #45484d 100%);
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+  -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.5), 0px 1px 0px white;
+}
+.roundedTwo4 label:after {
+  content: '';
+  width: 9px;
+  height: 5px;
+  position: absolute;
+  top: 3px;
+  left: 2px;
+  border: 3px solid #fcfff4;
+  border-top: none;
+  border-right: none;
+  background: transparent;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*
+.roundedTwo4 label:hover::after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+  opacity: 0.3;
+}
+*/
+.roundedTwo4 input[type=checkbox] {
+  visibility: hidden;
+}
+.roundedTwo4 input[type=checkbox]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
+  opacity: 1;
+}
+  </style>
+</head>
+<body style="background: black;">
+	<div style="background:black;width:100%;height:20%;display:inline-block;">
+ 	 	<li style="width:20%;height:40px;float:left;padding-top: 6px;padding-left: 5%;">
+ 	 		<a href="" style="font-size: 32px;color:white;text-decoration: none;">＜</a>
+        </li>
+        <li align="center" style="width:50%;height:40px;padding-top: 8px;">
+        <h1 style="color:white;font-size: 20px;">我的好友</h1>
+        </li>
+        <li style="width:20%;height:40px;float:right;padding-top: 4px;padding-right: 0;">
+        <a href="index.html" style="float:right;"><img src="images/shezhi.png" style="width:80%;height:80%;"></a>
+	    </li>
+ 	 </div>
+ 	<div style="background:#4B4848;width:100%;height:50px;">
+ 		
+ 	</div>
+ 	 <div style="background:black;width:100%;height:42px;display:inline-block;">
+ 	 	<li style="width:20%;height:40px;float:left;padding-top: 6px;padding-left: 5%;">
+ 	 		<a href="" style="font-size: 32px;color:white;text-decoration: none;">＜</a>
+        </li>
+        <li align="center" style="width:50%;height:40px;padding-top: 8px;">
+        <h1 style="color:white;font-size: 22px;">设置</h1>
+        </li>
+        <li style="width:20%;height:40px;float:right;padding-top: 2px;padding-right: 2%;">
+        <button style="width:40px;height:40px;float:right;background:black;color:white;font-size: 20px;border-color: transparent;">X</button>
+	    </li>
+ 	 </div>
+ 	 <div style="width:100%;height:30px;background:black;">
+ 		
+ 	</div>
+ 	<div style=" width:100%;height:40px;background:black;border:1px solid white;margin-top: 0px;">
+ 		<li style="float:left;width:50%;height: 40px; padding-left: 10%;">
+ 			<p style="font-size: 22px;color:white;padding-top: 7px;">接收信息</p>
+ 		</li>
+ 		<li style="width:25%;float:right;height:37px;padding-right: 1%;height:37px;padding-top: 3px;">
+				<div>
+					<label class="switch-btn">
+						<input class="checked-switch" type="checkbox" />
+						<span class="text-switch" ></span> 
+						<span class="toggle-btn"></span> 
+					</label>
+					</div>
+ 		</li>
+ 	</div>
+ 	<div style="width:100%;height:3px;background:black;">
+ 	</div>
+ 	<div style=" width:100%;height:80px;background:black;border:1px solid white;margin-top: 0px;">
+ 		<li style="float:left;width:75%;height:50%;padding-left: 10%;">
+ 		<p style="font-size:15px;color:white;padding-top: 10px;">接收所有信息</p>
+ 		</li>
+ 		<li style="float:right;width:14%;height:50%;padding-right: 1%;padding-top: 0px;">
+ 		<div class="roundedTwo" style="padding-top: 1px;padding-left: 2px;">
+      <input type="checkbox" value="None" id="roundedTwo" name="check" checked />
+      <label for="roundedTwo"></label>
+    </div>
+ 		</li>
+ 		<li style="float:left;width:75%;height:50%;padding-left: 10%;">
+ 		<p style="font-size: 15px;color:white;padding-top: 4px;">仅接收好友信息</p>
+ 		</li>
+ 		<li style="float:right;width:14%;height:50%;padding-right: 1%;">
+ 		<div class="roundedTwo1" style="padding-top: 1px;padding-left: 2px;">
+      <input type="checkbox" value="None" id="roundedTwo1" name="check" checked />
+      <label for="roundedTwo1"></label>
+    </div>
+ 		</li>
+ 	</div>
+ 	<div style="width:100%;height:40px;background:black;">
+ 		
+ 	</div>
+ 	<div style=" width:100%;height:40px;background:black;border:1px solid white;margin-top: 0px;">
+ 		<li style="float:left;width:50%;padding-left: 10%;">
+ 			<p style="font-size: 22px;color:white;padding-top: 7px;">接收加好友</p>
+ 		</li>
+ 		<li style="width:25%;float:right;height:37px;padding-top: 3px;padding-right: 1%;">
+ 		<div>
+ 	 <label class="switch-btn">
+						<input class="checked-switch" type="checkbox" />
+						<span class="text-switch"></span> 
+						<span class="toggle-btn"></span> 
+					</label>
+					</div>
+ 		</li>
+ 	</div>
+ 	<div style="width:100%;height:3px;background:black;">
+ 		
+ 	</div>
+ 	<div style=" width:100%;height:120px;background:black;border:1px solid white;margin-top: 0px;">
+ 		<li style="float:left;width:75%;height:30%;padding-left: 10%;">
+ 		<p style="font-size: 15px;color:white;padding-top: 10px;">需验证</p>
+ 		</li>
+ 		<li style="float:right;width:14%;height:30%;padding-right: 1%;">
+ 		<div class="roundedTwo2" style="padding-top: 1px;padding-left: 2px;">
+      <input type="checkbox" value="None" id="roundedTwo2" name="check" checked />
+      <label for="roundedTwo2"></label>
+    </div>
+ 		</li>
+ 		<li style="float:left;width:75%;height:30%;padding-left: 10%;">
+ 		<p style="font-size: 15px;color:white;padding-top: 4px;">钻石以上可加好友</p>
+ 		</li>
+ 		<li style="float:right;width:14%;height:30%;padding-right: 1%;">
+ 		<div class="roundedTwo3" style="padding-top: 1px;padding-left: 2px;">
+      <input type="checkbox" value="None" id="roundedTwo3" name="check" checked />
+      <label for="roundedTwo3"></label>
+    </div>
+ 		</li>
+ 		<li style="float:left;width:75%;height:30%;padding-left: 10%;">
+ 		<p style="font-size: 15px;color:white;padding-top: 4px;">不接受任何人加好友</p>
+ 		</li>
+ 		<li style="float:right;width:14%;height:30%;padding-right: 1%;">
+ 		<div class="roundedTwo4" style="padding-top: 1px;padding-left: 2px;">
+      <input type="checkbox" value="None" id="roundedTwo4" name="check" checked />
+      <label for="roundedTwo4"></label>
+    </div>
+ 		</li>
+ 	</div>　
+</body>
+</html>

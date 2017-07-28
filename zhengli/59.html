@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>申请战队</title>
+		<style>
+			body{background-color: black;}
+			.top{position:absolute;top:0%;left:0%;width:100%;height:8%;background:black;}
+			.fanhui{position:absolute;left:0%;top:0%;height:80%;width:25%;background:black;color:white;font-size:30px;border:0px;}
+			.team{position:absolute;left:45%;top:20%;height:70%;width:34%;background:black;color:white;font-size:29px;}
+			.div-inline {
+				display: inline;
+			}
+			div img{
+				width: 33%;
+			}
+			#box{
+       			width: 100%;
+        		margin: 30px auto;
+        		font-family: 'Microsoft YaHei';
+        		font-size: 60px;
+    		}
+    		input{
+        		width: 80%;
+        		border: 1px solid #e2e2e2;
+        		height: 100px;
+        		background-repeat: no-repeat;
+        		background-size: 500px;
+        		background-position:5px center;
+        		padding:0 0 0 40px;
+        		border-radius: 10px;
+        		background-color: #E2E2E2;
+        		font-size: 50px;
+        		text-align: center;
+        		position: absolute;
+        		left: 7%;
+        
+    		}
+    		.fake{
+    			width: 100%;
+    		}
+    		.white{height: 5px;
+    		background-color: white;}
+    		.alpha{
+    			background-color: white;
+    			border-radius: 7px;
+    			height: 2.6%;
+    			width: 10.7%;
+    			font-size: 10px;
+    			background-color: black;
+    			color: white;
+    		}
+   			.join{position:absolute;left:0%;top:42%;width:100%;height:58%;background:transparent;outline:none;border:0px;}
+		</style>
+		<script>
+			function join()
+			{
+				window.location.href = "60.html"
+			}
+			function fanhui()
+			{
+				window.history.go(-3);
+			}
+		</script>
+	</head>
+	<body marginheight="0px" marginwidth="0px">
+		<div class = "top">
+			<input type = "button" value = "＜" class = "fanhui" onclick = "fanhui()"/>
+			<div class = "team">申请战队</div>
+		</div>
+		
+		<br /><br /><br /><br />
+		<br />
+		<div id="pic">
+			<div class="div-inline" id="w"><img src="images/wzrr.png"</div>
+			<div class="div-inline" id="l"><img src="images/lol.png"</div>
+			<div class="div-inline" id="d"><img src="images/dota2.png"</div>
+		</div>
+		<br /><br /><br /><br />
+
+		
+		<div id="box">
+        <input type="text" name="search" placeholder="请输入战队名称          ">
+		</div>
+		<br /><br /><br /><br />
+		<br /><br /><br /><br />
+		<div id>
+			<img src="images/fake.png" class="fake" />
+			<div class="white"></div>
+			<img src="images/fake.png" class="fake" />
+			<div class="white"></div>
+			<img src="images/fake.png" class="fake" />
+			<div class="white"></div>
+			<img src="images/fake.png" class="fake" />
+			<input type = "button" class = "join" value = "" onclick = "join()"/>
+		</div>
+		
+		
+
+ 
+		
+		
+	</body>
+</html>

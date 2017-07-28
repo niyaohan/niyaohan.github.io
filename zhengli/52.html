@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>创建战队</title>
+	</head>
+	<style>
+		*{margin:0px;padding:0px;border:0px}
+			body{width:100%;height:100%;border:0px}
+			img{width:100%;height:100%}
+			div{width:100%;position:absolute;border:0}
+			
+			.top{top:0%;left:0%;height:8%;background:black;}
+			.fanhui{position:absolute;top:28%;left:5%;width:10%;background:black;color:white;font-size:35px;outline:none;}
+			.build{top:30%;left:45%;width:28%;background:black;color:white;font-size:25px;}
+			
+			.bottom{top:8%;left:0%;height:92%;background:black;}
+			.sign{top:5%;left:2.5%;width:95%;height:25%;background:#696969;}
+			.sign1{top:38%;left:12%;width:25%;height:20%;color:white;background:#696969;font-size:25px;}
+			.touxiang{position:absolute;top:15%;left:60%;width:23.5%;height:60%;font-size:25px;border-radius:125px;outline:none;}
+			.name{top:32%;left:2.5%;width:95%;height:15%;background:#696969;}
+			.name1{top:20%;left:12%;width:30%;height:25%;color:white;font-size:25px;}
+			.name2{position:absolute;top:16%;left:60%;width:25%;height:25%;color:gainsboro;background:#696969;font-size:25px;}
+			.game{top:60%;left:12%;width:30%;height:25%;color:white;font-size:25px;}
+			.game1{position:absolute;top:55%;left:65%;width:20%;height:25%;color:white;background:#696969;font-size:25px;outline:none;}
+			.next{position:absolute;top:60%;left:8%;width:84%;height:6%;color:black;background:white;font-size:30px;border-radius:15px;}
+			.last{top:85%;left:0%;height:15%;background:black;display: none;}
+			.paizhao{position:absolute;top:0%;left:0%;width:100%;height:31%;color:black;background:white;font-size:18px;}
+			.choose{position:absolute;top:32%;left:0%;width:100%;height:31%;color:black;background:white;font-size:18px;} 
+			.quexiao{position:absolute;top:70%;left:0%;width:100%;height:31%;color:black;background:white;font-size:18px;outline:none;}
+	
+			.choose1{top:68%;left:0%;height:32%;background:grey;display: none;}
+			.queren{position:absolute;top:16%;left:65%;height:15%;width:22%;background:white;color:black;font-size:20px;border-radius:10px;outline:none;}
+			.quxiao1{position:absolute;top:16%;left:12%;height:15%;width:22%;background:white;color:black;font-size:20px;border-radius:10px;outline:none;}
+			.choose_game{left:37%;top:40%;height:18%;width:28%;background:grey;font-size:30px;}
+	
+	</style>
+	<script>
+		function fanhui()
+		{
+			window.location.href = "48.html";
+		}
+		function choose(id)
+		{
+			document.getElementById(id).style.display = "block";
+		}
+		function quxiao(id)
+		{
+			document.getElementById(id).style.display = "none";
+		}
+		function paizhao()
+		{
+			alert("拍照");
+		}
+		function choose_picture()
+		{
+			alert("从手机相册中选择");
+		}
+		function next()
+		{
+			window.location.href = "53.html";
+		}
+		function queren(id)
+		{
+			document.getElementById(id).style.display = "none";
+		}
+	</script>
+	<body>
+		<div class = "top">
+			<input type = "button" class = "fanhui" value = "＜" onclick = "fanhui()"/>
+			<div class = "build">创建战队</div>
+		</div>
+		<div class = "bottom">
+			<div class = "sign">
+				<div class = "sign1">战队标志</div>
+				<input type = "button" class = "touxiang" value = "选择头像" onclick = "choose('last')"/>
+			</div>
+			<div class = "name">
+				<div class ="name1">战队名称:</div>
+				<input type = "text" placeholder = "输入名称" class = "name2" />
+				<div class = "game">选择游戏:</div>
+				<input type = "button" class = "game1" value = "＞" onclick = "choose('choose_game')"/>
+			</div>
+			<input type = "button" class = "next" value = "下一步"  onclick = "next()"/>
+			<div class = "last" id = "last">
+				<input type = "button" class = "paizhao" value ="拍照"  onclick = "paizhao()"/>
+				<input type = "button" class = "choose" value = "从手机相册选择" onclick = "choose_picture()"/>
+				<input type = "button" class = "quexiao" value = "取消" onclick = "quxiao('last')"/>
+			</div>
+			<div class = "choose1" id = "choose_game">
+				<input type = "button" class = "queren" value = "确认" onclick = "queren('choose_game')"/>
+				<input type = "button" class = "quxiao1" value = "取消" onclick = "quxiao('choose_game')"/>
+				<div class = "choose_game">选择游戏</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,474 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>69</title>
+<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+    $(function(){
+       $(".blist").on("click","li",function(){
+         // 设index为当前点击
+         var index = $(this).index();
+         // 点击添加样式利用siblings清除其他兄弟节点样式
+         $(this).addClass("active").siblings().removeClass("active");
+         // 同理显示与隐藏
+         $(this).parents(".wrap").find(".blsit-list li").eq(index).show().siblings().hide();
+       })
+    })
+	</script>
+	<script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+<style>
+    	*{
+		margin: 0;padding: 0;
+	}
+		body{
+			width:100%;
+			height:100%;
+		}
+	a{
+		text-decoration: none;
+	}
+    .wrap{
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+    /*清浮动---clearfix*/
+    .clearfix {
+      *zoom: 1;
+    }
+    .clearfix:after {
+      content: "";
+      clear: both;
+      display: block;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+    .blist {
+      border:1px solid #d9d9d9;
+	  border-color:transparent;
+      width: 100%;
+      height: 32px;
+    }
+    .blist li:first-child{
+      border-left: none;
+    }
+    .blist li{
+       list-style: none;
+       width: 33%;
+       height: 32px;
+       border-left:1px solid white;
+       font-size: 16px;
+       font-family: "";
+       line-height: 32px;
+       text-align: center;
+		color:white;
+       float: left;
+       /*鼠标样式改变为一个手*/
+       cursor: pointer;
+       /*字体免选中*/
+       -webkit-user-select: none;
+  
+    }
+    .blsit-list{
+      width: 100%;
+    }
+    .blsit-list li{
+       list-style: none;
+       width: 100%;
+       border-bottom-color: transparent;
+       height: 100%;
+       border-top: none;
+	   color:white;
+    }
+    .wrap .blist li.active{
+      font-weight: bold;
+      color: white;
+      border-bottom: 2px solid red;
+      position: relative;
+      top:-1px;
+      height: 31px;
+    }
+    .blsit-list li:first-child{
+      display: block;
+    }
+    .blsit-list li{
+     display: none;
+    }
+	#a,#b,#c{
+		width:90%;
+		height:45%;
+		background-color:gray;    
+		margin: auto;
+		position: absolute;
+		z-index:3;
+/*		top: 0;*/
+		bottom: 10%;
+		left: 4%;
+		right: 4%;
+		display:none;
+		border-radius: 10px;
+	}
+	.yikuai,.erkuai{
+	        height:6%;
+	}
+	.yikuai span{	
+		font-size: 20px;
+		display:inline;
+		margin-left:6%;
+	}
+	.yikuai button{
+		font-size:20px;
+		position: absolute;
+		right:0;
+	}
+button{
+		color: white;
+		background-color: transparent;
+		border:0;
+	}
+	p,span{
+		color:white;}
+	option,select{
+		font-size:25px;
+	}
+	div{
+		margin: 0;
+	}
+	.c{
+		margin: 0;
+		border: 1px solid #656565;
+	}
+	.c img{
+		width: 107px;
+		height: 80px;
+		margin-left: 10%;
+	}
+	.c span{
+		margin-left: 10%;
+		position: absolute;
+	}
+	div.transbox
+{
+  width: 100%;
+  height: 10%;
+  margin:2% auto auto auto;
+  background-color: #7C7575;
+}
+	</style>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+	<body style="background:black;">
+<div style="background:black;height:40px;width:100%;margin-top:0px;font-size: 12px;text-align: center;display:inline-block;">
+	<li style="width:25%;height:40px;float:left;padding-top: 0px;">
+ 	 		<a onclick="goBack()" style="font-size: 25px;color:white;text-decoration: none;float:left;padding-left: 10%;padding-top: 8px;">＜</a>
+        </li>
+        <li style="width:50%;height:40px;padding-top: 0px;float:left;">
+        <img src="images2/10.png" style="width:30px;height:40px;padding-top: 5px;">
+        </li>
+	<li style="width:25%;height:40px;float:right;margin-top:0px;text-align: center;">
+		<a href=""><img src="images2/jia.png" style="width:30px;height: 30px;text-align: center;"></a>
+		<p style="color:white;">创建比赛</p>	
+	</li>
+</div>
+<div class="wrap" style="padding-top: 5px;">
+       <ul class="blist clearfix" style="background:black;">
+         <li class="active">锦标赛</li>
+         <li>擂台赛</li>
+		   <li>挑战赛</li>
+       </ul>
+       <ul class="blsit-list">
+         <li>
+         	<div style="width:100%;height:40px;">
+         		<p style="font-size: 20px;padding-left: 10%;">热门推荐：</p>
+         	</div>
+         	<div style="width:100%;height:100%;">
+         		<img src="images2/logo4.png" style="width:100%;height:100%;">
+         	</div>
+         	<div style="width:100%;height:10px;background: #8A8A8A;"></div>
+         	<div style="width:100%;height:30px;background:#212121;border:1px solid ;border-color: transparent;">
+<div style="width:49%;height:30px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;border-bottom-color: #D1370C;">
+      <div style="width:54px;height:30x;margin: 4px auto;">
+       <a href="" ><p style="color:white;font-size: 18px;">积分区</p></a></div>
+</div>
+<div style="width:49%;height:30px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;border-bottom-color:white;"><div style="width:72px;margin:4px auto;">
+	<a href=""><p style="color:white;font-size: 18px;">封神区</p></a>
+       </div>
+</div>	
+</div>
+       <div class="transbox" style="width:95%;height:59px;">
+		<div style="width:22%;float:left;padding-top: 4px;">
+			<img src="images2/1.png" style="padding-left: 5px;">
+		</div>
+		<div style="width:76%;float:left;padding-left:0px;padding-top: 4px;">
+		<div style="width:100%;height:23px;">
+		<div style="width:78%;height:23px;float:left;">
+			<a href="48.html" style="color:white;"><h4 style="float:left;">
+				杭州王者荣耀校园争霸赛
+			</h4></a>
+			</div>
+			<div style="float:right;width:20%;height:23px;">
+				<a href="48.html"><input type="button" value="积分报名" width="30px" height="23px" style="float:right;"></a>
+			</div>
+			</div>
+			<div style="width:100%;height:16px;float:left;">
+			<p style="font-size: 10px;float:left;padding-left:0px;">报名时间 : 2017—8—1号截止       已报名人数:88          正在报名中……</p></div>
+			<div style="width:100%;height:16px;">
+			<p style="font-size: 10px;float:left;">10000封神币</p></div>
+		</div>
+	</div>
+	<div class="transbox" style="width:95%;height:59px;">
+		<div style="width:22%;float:left;padding-top: 4px;">
+			<img src="images2/2.png" style="padding-left: 5px;">
+		</div>
+		<div style="width:76%;float:left;padding-left:0px;padding-top: 4px;">
+		<div style="width:100%;height:23px;">
+		<div style="width:78%;height:23px;float:left;">
+			<a href="" style="color:white;"><h4 style="float:left;">
+				英雄联盟校园争霸赛
+				</h4></a>
+			</div>
+			<div style="float:right;width:21%;height:23px;">
+				<a href=""><input type="button" value="积分报名" width="30px" height="23px" style="float:right;"></a>
+			</div>
+			</div>
+			<div style="width:100%;height:16px;float:left;">
+			<p style="font-size: 10px;float:left;padding-left:0px;">报名时间 : 2017—8—1号截止     已报名人数:88    正在报名中……</p></div>
+			<div style="width:100%;height:16px;">
+			<p style="font-size: 10px;float:left;">10000封神币</p></div>
+		</div>
+	</div>
+	<div class="transbox" style="width:95%;height:59px;">
+		<div style="width:22%;float:left;padding-top: 4px;">
+			<img src="images2/3.png" style="padding-left: 5px;">
+		</div>
+		<div style="width:76%;float:left;padding-left:0px;padding-top: 4px;">
+		<div style="width:100%;height:23px;">
+		<div style="width:78%;height:23px;float:left;">
+			<a href="" style="color:white;"><h4 style="float:left;">
+				杭州DOTA2校园精英赛
+				</h4></a>
+			</div>
+			<div style="float:right;width:21%;height:23px;">
+				<a href=""><input type="button" value="积分报名" width="30px" height="23px" style="float:right;"></a>
+			</div>
+			</div>
+			<div style="width:100%;height:16px;float:left;">
+			<p style="font-size: 10px;float:left;padding-left:0px;">报名时间 :2017—6—1号截止     已报名人数:88    报名已结束……</p></div>
+			<div style="width:100%;height:16px;">
+			<p style="font-size: 10px;float:left;">10000封神币</p></div>
+		</div>
+	</div>
+        <div class="transbox" style="width:95%;height:59px;">
+		<div style="width:22%;float:left;padding-top: 4px;">
+			<img src="images2/2.png" style="padding-left: 5px;">
+		</div>
+		<div style="width:76%;float:left;padding-left:0px;padding-top: 4px;">
+		<div style="width:100%;height:23px;">
+		<div style="width:78%;height:23px;float:left;">
+			<a href="" style="color:white;"><h4 style="float:left;">
+				英雄联盟校园争霸赛
+				</h4></a>
+			</div>
+			<div style="float:right;width:21%;height:23px;">
+				<a href=""><input type="button" value="积分报名" width="30px" height="23px" style="float:right;"></a>
+			</div>
+			</div>
+			<div style="width:100%;height:16px;float:left;">
+			<p style="font-size: 10px;float:left;padding-left:0px;">报名时间 : 2017—8—1号截止     已报名人数:88    正在报名中……</p></div>
+			<div style="width:100%;height:16px;">
+			<p style="font-size: 10px;float:left;">10000封神币</p></div>
+		</div>
+	</div>
+	<div class="transbox" style="width:95%;height:59px;">
+		<div style="width:22%;float:left;padding-top: 4px;">
+			<img src="images2/3.png" style="padding-left: 5px;">
+		</div>
+		<div style="width:76%;float:left;padding-left:0px;padding-top: 4px;">
+		<div style="width:100%;height:23px;">
+		<div style="width:78%;height:23px;float:left;">
+			<a href="" style="color:white;"><h4 style="float:left;">
+				杭州DOTA2校园精英赛
+				</h4></a>
+			</div>
+			<div style="float:right;width:21%;height:23px;">
+				<a href=""><input type="button" value="积分报名" width="30px" height="23px" style="float:right;"></a>
+			</div>
+			</div>
+			<div style="width:100%;height:16px;float:left;">
+			<p style="font-size: 10px;float:left;padding-left:0px;">报名时间 :2017—6—1号截止     已报名人数:88    报名已结束……</p></div>
+			<div style="width:100%;height:16px;">
+			<p style="font-size: 10px;float:left;">10000封神币</p></div>
+		</div>
+	</div>
+         </li>
+         <li>
+         <div style="width:100%;height:50px;"></div>
+        <div class="yikuai" style="border:2px solid white;border-color:transparent;border-bottom-color: white;">
+		<span style="width:60px;">请选择游戏</span>
+		<span id="game" style="width:160px;color:white;"></span>
+		<button onclick="shield()">></button>
+	</div>
+       <div style="width:100%;height:50px;"></div>
+        <div class="yikuai" style="border:2px solid white;border-color:transparent;border-bottom-color: white;">
+		<span>请选择擂台金额</span>
+		<span id="system" style="color:white;"></span>
+		<button onclick="shield1()">></button>
+	</div>
+	<div style="width:100%;height:50px;"></div>
+	<div class="yikuai" style="border:2px solid white;border-color:transparent;border-bottom-color: white;">
+		<span>请选择模式、参赛方式、裁判</span><br>
+
+		<span id="range" style="color:white;"></span>
+		<button onclick="shield2()">></button>
+	</div>
+       <div class="" align="center" style="margin-top:5%;">
+        <a href="73.html"><button type="button" class="button" style="background:#191818;border:1px;
+			font-size: 32px; 
+			width:60%;
+			height:40px;
+			color:white;
+			border-style:solid;
+			border-radius:5px;
+			border-color:deepskyblue;">确定</button></a>
+    </div>
+        <div id="a">
+         <button style="margin-top:20px;margin-left:30px;float:left;font-size:30px;width:15%;border-radius:5px;background-color:white;color:black;" onclick="cancel_shield()">取消</button>
+	 <button style="margin-top:20px;margin-right:30px;float:right;font-size:30px;width:15%;border-radius:5px;background-color:white;color:black;" id="queding">确定</button>
+	    <p style="margin-top:30%; font-size:30px;text-align:center;color:white;">选择游戏</p>
+		<select style="margin-left:20%;margin-top:10%;width:60%;" id="select1">
+			<option value="DOTA2">DOTA2</option>
+			<option value="英雄联盟">英雄联盟</option>
+			<option value="王者荣耀">王者荣耀</option>
+		</select>	
+	
+</div>
+<div id="b">
+		<button style="margin-top:20px;margin-left:30px;float:left;font-size:30px;width:15%;border-radius:5px;background-color:white;color:black;" onclick="cancel1()">取消</button>
+	 <button style="margin-top:20px;margin-right:30px;float:right;font-size:30px;width:15%;border-radius:5px;background-color:white;color:black;" id="queding1">确定</button>
+	    <p style="margin-top:30%; font-size:30px;text-align:center;color:white;">说明：请选择金额（封神币）</p>
+	       <select style="margin-left:20%;margin-top:10%;width:60%;" id="select2">
+			<option value="100">100</option>
+			<option value="200">200</option>
+			<option value="500">500</option>
+			<option value="1000">1000</option>
+			<option value="2000">2000</option>
+			<option value="3000">3000</option>
+			<option value="5000">5000</option>
+			<option value="10000">10000</option>
+		</select>	
+	
+</div>
+
+<div id="c">
+	<button style="margin-top:20px;margin-left:30px;float:left;font-size:30px;width:15%;border-radius:5px;background-color:white;color:black;" onclick="cancel2()">取消</button>
+	 <button style="margin-top:20px;margin-right:30px;float:right;font-size:30px;width:15%;border-radius:5px;background-color:white;color:black;" id="queding2">确定</button>
+	    <p style="margin-top:30%; font-size:30px;text-align:center;color:white;">提示：请选择模式、方式、裁判</p>
+		<select style="margin-left:20%;margin-top:10%;width:60%;" id="select3">
+			<option value="单排">单排</option>
+			<option value="双排">双排</option>
+			<option value="1V1">1V1</option>
+			<option value="3V3">3V3</option>
+			<option value="5V5">5V5</option>
+			<option value="自我选择">自我选择</option>
+			<option value="添加裁判">添加裁判</option>
+		</select>	
+	
+</div>
+          <script type="text/javascript">
+   function shield(){
+    var l = document.getElementById("a");
+    l.style.display = "block";
+}
+function cancel_shield(){
+    var l = document.getElementById("a");
+    l.style.display = "none";
+}
+$("#queding").click(function(){
+    var x = $('#select1 option:selected').text();	
+	$("#game").text(x);
+	var l = document.getElementById("a");
+    l.style.display = "none";
+});
+	function shield1(){
+    var l = document.getElementById("b");
+    l.style.display = "block";
+}
+function cancel1(){
+    var l = document.getElementById("b");
+    l.style.display = "none";
+}
+$("#queding1").click(function(){
+    var y = $('#select2 option:selected').text();	
+	$("#system").text(y);
+	var l = document.getElementById("b");
+    l.style.display = "none";
+});	
+	
+	
+function shield2(){
+    var l = document.getElementById("c");
+    l.style.display = "block";
+}
+function cancel2(){
+    var l = document.getElementById("c");
+    l.style.display = "none";
+}
+$("#queding2").click(function(){
+    var z = $('#select3 option:selected').text();	
+	$("#range").text(z);
+	var l = document.getElementById("c");
+    l.style.display = "none";
+});	
+	</script>
+         </li> 
+		 <li>
+        		<div class="a">
+         		<div class="b">
+         			<span style="margin-left:10%;">选择游戏</span>
+         			<span style="margin-left:19%;">选择房间</span>
+         		</div>
+         		<div class="c">
+         			<img src="images2/18.PNG">
+         			<span  style="padding-top: 30px">普通场</span>
+         		</div>
+         		<div class="c">
+         			<img src="images2/19.PNG">
+         			<span style="padding-top: 30px">中级场</span>
+         		</div>
+         		<div class="c">
+         			<img src="images2/13.PNG">
+         			<span style="padding-top: 30px">高级场</span>
+         		</div>
+         		<div class="c">
+         			<img src="images2/12.PNG">
+         			<span style="padding-top: 30px">王者场</span>
+         		</div>
+         	</div></li>
+       </ul>
+    </div>	
+	<div style="position: fixed;bottom: 0px; width:100%;height:45px;background:#474747;border:1px solid ;border-color: transparent;border-top-color:white;">
+<ul>
+<li style="width:33%;height:45px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;">
+       <div style="width:40px;margin:0px auto;">
+       <a href=""><img src="images2/14.png" style="width:40px;height:40px;">
+       </a></div>
+</li>
+<li style="width:30%;height:45px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;"><div style="width:40px;margin:0px auto;">
+       <a href="59.html"><img src="images2/15.png" style="width:40px;height:40px;">
+       </a></div>
+</li>
+<li style="width:33%;height:45px;display: inline;float:left;border:1px solid ;border-color: transparent;"><div style="width:40px;margin:0px auto;">
+       <a href="5.html"><img src="images2/16.png" style="width:40px;height:40px;">
+       </a></div>
+</li>
+</ul>	
+</div>
+</body>
+</html>

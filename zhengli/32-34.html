@@ -1,0 +1,233 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>挑战赛</title>
+<style>
+    	*{
+		margin: 0;padding: 0;
+	}
+		body{
+			margin:0px;
+			width:100%;
+			height:100%;
+			background-color: black;
+		}
+	a{
+		text-decoration: none;
+	}
+    .wrap{
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+    /*清浮动---clearfix*/
+    .clearfix {
+      *zoom: 1;
+    }
+    .clearfix:after {
+      content: "";
+      clear: both;
+      display: block;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+    .blist {
+      border:1px solid #d9d9d9;
+	  border-color:transparent;
+      width: 100%;
+      height: 32px;
+    }
+    .blist li:first-child{
+      border-left: none;
+    }
+    .blist li{
+       list-style: none;
+       width: 33%;
+       height: 32px;
+       border-left:1px solid white;
+       font-size: 30px;
+       font-family: "";
+       line-height: 32px;
+       text-align: center;
+		color:white;
+       float: left;
+       /*鼠标样式改变为一个手*/
+       cursor: pointer;
+       /*字体免选中*/
+       -webkit-user-select: none;
+  
+    }
+    .blsit-list{
+      width: 100%;
+    }
+    .blsit-list li{
+       list-style: none;
+       width: 100%;
+       border-bottom-color: transparent;
+       height: 100%;
+       border-top: none;
+	   color:white;
+    }
+    .wrap .blist li.active{
+      font-weight: bold;
+      color: white;
+      border-bottom: 2px solid red;
+      position: relative;
+      top:-1px;
+      height: 31px;
+    }
+    .blsit-list li:first-child{
+      display: block;
+    }
+    .blsit-list li{
+     display: none;
+    }
+	.th{
+	 height: 40px;
+	width: 25%;
+
+}
+	.th1{
+	 height: 40px;
+	width: 33%;
+
+}
+	.table1{
+		width:100%;
+		height:100px;
+		text-align: center;
+}
+	.table2{
+		width:100%;
+		height:100px;
+		text-align: center;
+}
+</style>
+<script src="js/jquery-1.11.3.min.js"></script>
+
+</head>
+
+<body style="background:black;">
+<div style="background:black;height:50px;width:100%;margin-top:0px;">
+	<div style="width:20%;height:50px;float:left;padding-left: 4%;">
+		<a href="http://www.asgardusk.com/yao/32.html" style="font-size: 32px;color:white;text-decoration: none;">＜</a>
+	</div>
+	<div  style="width:100%;height:50px;">
+		<p style="color:white;font-size: 20px;padding-top:14px;padding-left: 40%;">我的战况</p>
+	</div>
+</div>
+<div class="wrap">
+       <ul class="blist clearfix" style="background:black;">
+         <li class="active">锦标赛</li>
+         <li>擂台赛</li>
+         <li>挑战赛</li>
+       </ul>
+       <ul class="blsit-list">
+         <li>
+         	 <div style="background: #2F2E2E;width:100%;height:30px;">
+         		
+         	</div>
+         	<div style="width:100%;height;">
+         <table class="table1">
+  <tr style="font-size: 20px;">
+    <th class="th">名称</th>
+    <th class="th">结束时间</th>
+    <th class="th">排名</th> 
+     <th class="th">奖金</th>
+  </tr>
+  </table>
+  <div style="background: #2F2E2E;width:100%;height:20px;">
+         		
+         	</div>
+    <table class="table2">     	
+  <tr>
+  	<th class="th">二蛋</th>
+  	<th class="th">17:35</th>
+  	<th class="th">5</th>
+  	<th class="th">188</th>
+  </tr>
+</table>
+
+         	</div>
+         </li>
+         <li>
+       <div style="background: #2F2E2E;width:100%;height:30px;">
+         		
+         	</div>
+         	<div style="width:100%;height;">
+         <table class="table2">
+  <tr style="font-size: 20px;">
+    <th class="th1">结束时间</th>
+    <th class="th1">轮次</th>
+    <th class="th1">擂台奖金</th> 
+  </tr>
+  </table>
+  <div style="background: #2F2E2E;width:100%;height:20px;">
+         		
+         	</div>
+    <table class="table2">     	
+  <tr>
+  	<th class="th1">17:35</th>
+  	<th class="th1">5</th>
+  	<th class="th1">500</th>
+  </tr>
+</table>
+
+         	</div>
+         </li>
+   
+         <li>
+         	<div style="background: #2F2E2E;width:100%;height:30px;">
+         		
+         	</div>
+         	<div style="width:100%;height;">
+         <table class="table1">
+  <tr style="font-size: 20px;">
+    <th class="th">游戏</th>
+    <th class="th">房间</th>
+    <th class="th">排名</th> 
+     <th class="th">奖金</th>
+  </tr>
+  </table>
+  <div style="background: #2F2E2E;width:100%;height:20px;">
+         		
+         	</div>
+    <table class="table2">     	
+  <tr>
+  	<th class="th">王者荣耀</th>
+  	<th class="th">中级场18号</th>
+  	<th class="th">5</th>
+  	<th class="th">500</th>
+  </tr>
+  <tr>
+  	<th class="th">英雄联盟</th>
+  	<th class="th">王者场1号</th>
+  	<th class="th">1</th>
+  	<th class="th">10000</th>
+  </tr>
+</table>
+
+         	</div>
+         </li> 
+       </ul>
+    </div>
+    <script type="text/javascript">
+    $(function(){
+       $(".blist").on("click","li",function(){
+         // 设index为当前点击
+         var index = $(this).index();
+         // 点击添加样式利用siblings清除其他兄弟节点样式
+         $(this).addClass("active").siblings().removeClass("active");
+         // 同理显示与隐藏
+         $(this).parents(".wrap").find(".blsit-list li").eq(index).show().siblings().hide();
+       })
+    })
+	</script>
+	
+
+
+
+</body>
+</html>

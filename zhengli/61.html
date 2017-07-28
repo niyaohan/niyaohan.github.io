@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <meta charset="utf-8">
+  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>	
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+$(function(){
+$(".inlin img").click(function(){
+	$(".noplay").css("display","block");
+
+});
+$(".noplay button").click(function(){
+	$(".noplay").css("display","none");
+
+});
+
+
+
+});
+function queding()
+{
+	window.location.href = "/wangye/app/63/63.html";
+}
+</script>
+<style type="text/css">
+
+body{
+	background:black;
+}
+.alltitle{
+	font-size: 29px;
+	color: white;
+    font-weight: bold;
+
+}
+.head{
+	padding-top: 20px;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.fenlei img{
+	position: relative;
+	top: 20px;
+    left: -300px;
+    
+}
+
+.bigimg{
+
+text-align: center;
+padding-top: 40px;
+
+
+}
+textarea,.inlin{
+background:black;	
+
+color:white;
+width: 100%;
+height: 200px;
+background:black;	
+border: transparent;
+font-size: 29px;	
+border-top: 3px white solid;
+margin-bottom: 100px;
+
+}
+
+.noplay{
+    width: 90%;
+    height: 800px;
+    background: rgb(20,20,20);
+    text-align: center;
+    position: relative;
+    bottom: 600px;
+    margin-left: 50px;
+    display: none;
+
+}
+.noplay span{
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+
+
+}
+.noplay input{
+
+	width: 80%;
+	height: 30px;
+	background: rgb(20,20,20);
+	border-radius: 20px;
+	margin-top: 40px;
+	font-size: 29px;
+
+}
+.noplay button{
+background: rgb(20,20,20);
+border:transparent;
+
+color: white;
+font-size: 30px;
+font-weight: bold;
+padding-right: 100px;
+padding-left: 100px;
+padding-top: 200px;
+}
+
+
+</style>
+<div class="all">
+<div class="head">
+<span class="fenlei"><a href="/wangye/app/60/60.html"><img src="images/logo1.png"></a></span>
+<span class="alltitle">申请战队</span>
+
+</div>
+<div class="bigimg">
+
+<div class="img big"><img src="images/imga.png"></div>
+
+
+</div>
+
+<div class="text">
+<textarea>申请留言：</textarea>
+
+
+</div>
+<div class="inlin">
+<span>游戏账号信息绑定</span>
+<span style="float: right;position: relative;right: 100px;">绑定角色</span>
+<a href="#nowhere"><img src="images/you.png" style="float: right;position: relative;left: 90px;"></a>
+</div>
+<div class="contain">
+<div class="noplay" >
+<div style="margin: 50px 0px 50px 0px;"><span>请选择你的游戏角色</span></div>
+<div><input type="text" name="" placeholder="系统"></div>
+<div><input type="text" name="" placeholder="曲服"></div>
+<div><input type="text" name="" placeholder="角色"></div>
+<div><button class="unset" type="button">取消</button><button type="button" onclick = "queding()">确定</button></div>
+
+
+</div>
+</div>
+</div>
+
+</div>
+</body>
+</html>

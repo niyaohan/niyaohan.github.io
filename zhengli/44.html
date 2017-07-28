@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>8</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#31").hide();	
+				
+				
+			});
+			
+			function buqian(){
+				$("#31").show();
+				
+			}
+//			function color(){
+//				$("#31").css("background","red");
+//			}
+			
+		</script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("button").onclick(function(){
+					
+					$("button").css("background","red");
+				});
+			
+			});
+			</script>
+		
+		
+		
+		
+		
+	</head>
+	<body>
+		<style type="text/css">
+			body{
+			background: black;
+		}
+		img.left{
+			position: absolute;
+			
+			top: 3%;
+			left: 5%;
+			width: 7%;
+			height: auto;
+		}	
+		img.title{
+			margin-top: 0px;
+			margin-left: 45%;
+			width: 10%;
+			height: auto;
+		}
+		
+		img.biaotou{
+			
+			margin-left: 2px;
+			margin-right: 2px;	
+			overflow: hidden;
+		}
+		button.fir{	
+			position: absolute;
+			border-style: inset;
+			background: black;
+			border-color: white;
+			border-right: none;
+			border-bottom: none;
+			color: white;
+			top:15%;
+			left: 18%;
+		}
+		
+		.city { 
+			
+			position: absolute;
+			top: 46%;
+			left: 30%;
+ 		display: inline-block;
+ 		 padding: 1px 15px;
+ 		 transform: skew(-20deg);
+ 		
+ 		 color: #333;
+  		
+  		background: orangered;
+		}
+		.city div{
+			transform: skew(20deg);
+		}
+		
+		/*table{
+			position: absolute;
+			top: 45%;
+			margin-left: 2px;
+			margin-right: 2px;
+			background: #333333;
+			border-color: black;
+			
+			border-style: hidden;
+			
+		}*/
+		
+		div.tata{
+			position: absolute;
+			left: 6%;
+			top: 84%;
+			border:  1px solid  white;
+			width: 40%;
+			height: 6%;
+			border-radius: 15px;
+		}
+		
+		
+	div.tata div.ta1{
+			position: absolute;
+			left: 9%;
+			top: 8%;
+			padding-top: 2px;
+			padding-bottom: 0.1px;
+			width: 80%;
+			height: 70%;
+			border:  1px solid  #333333;
+			
+			background:  #333333;
+			
+		}
+		div.tata2{
+			position: absolute;
+			left: 54%;
+			top: 84%;
+			border:  1px solid  white;
+			width: 40%;
+			height: 6%;
+			border-radius: 15px;
+		}
+		
+		div.tata2 div.ta2{
+			position: absolute;
+			left: 9%;
+			top: 8%;
+			padding-top: 2px;
+			padding-bottom: 0.1px;
+			width: 80%;
+			height: 70%;
+			border:  1px solid  #333333;
+			
+			background:   #333333;
+			
+		}
+	
+		div.tata div.ta1 div.tt1 { 
+			
+			position: absolute;
+			top: -40%;
+			left: 10%;
+ 		display: inline-block;
+ 		padding: 4px 15px;
+ 		 transform: skew(-20deg);
+ 		height: 20%;
+ 		 color: #333;
+  		width: 50%;
+  		background: orangered;
+		}
+		.tt1 div{
+			transform: skew(20deg);
+		}
+		
+		
+		
+		
+		div.tata2 div.ta2 div.tt2 { 
+			
+			position: absolute;
+			top: -40%;
+			left: 15%;
+ 		display: inline-block;
+ 		padding: 4px 15px;
+ 		 transform: skew(-20deg);
+ 		height: 20%;
+ 		 color: #333;
+  		width: 50%;
+  		background: orangered;
+		}
+		.tt2 div{
+			transform: skew(20deg);
+		}
+		
+		
+		
+		
+		</style>
+		<a href="#"><img class="left" src="images/return.jpg"></a>
+		<img class="title" src="images/qiandao.jpg">
+		<img src="images/biaotou1.jpg" style=" width: 100%; height: 30%;">
+		<a href=""><button class="fir" onclick=""> 签到领奖品</button></a>
+		<div class="city"><div><font style="font-size: 0.9em;">当月已签到6天</font></div></div>
+		
+		<!--<table border="1" width="95%" height="30%" bordercolor="black"> 
+			<tr class="t1" style="width: 10%;">
+				<td style="text-align: center;"><img src="huang5.jpg"></td>
+				<td style="text-align: center;"><img src="huang10.jpg"></td>
+				<td style="text-align: center;"><img src="huang15.jpg"></td>
+				<td style="text-align: center;"> <img src="huang20.jpg"></td>
+				<td style="text-align: center;"> <img src="huang25.jpg"></td>
+				<td style="text-align: center;"><img src="huang30.jpg"></td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="t2">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="t3">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="t4">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr class="t5">
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+		</table>
+		-->
+		
+		<div class="tupian">
+			<img src="images/huang5.jpg" style="position: absolute; top: 51%; left: 5%; width: 13%;">
+			<img src="images/huang10.jpg" style="position: absolute; top:51%; left: 18%; width: 13%;">
+			<img src="images/huang15.jpg" style="position: absolute; top: 51%; left: 31%; width: 13%;">  
+			<img src="images/huang20.jpg" style="position: absolute; top: 51%; left: 44%; width: 13%;">
+			<img src="images/huang25.jpg" style="position: absolute; top:51%; left: 57%; width: 13%;">
+			<img src="images/huang30.jpg" style="position: absolute; top: 51%; left: 70%; width: 13%;"> 
+			<img src="images/jingji.jpg" style="position: absolute; top: 51%; left: 83%; width: 13%;">
+			<img src="images/hua5.jpg" style="position: absolute; top: 57%; left: 5%; width: 13%;">
+			<img src="images/hua10.jpg" style="position: absolute; top: 57%; left: 18%; width: 13%;">
+			<img src="images/hua15.jpg" style="position: absolute; top: 57%; left: 31%; width: 13%;">  
+			<img src="images/hua20.jpg" style="position: absolute; top: 57%; left: 44%; width: 13%;">
+			<img src="images/hua25.jpg" style="position: absolute; top:57%; left: 57%; width: 13%;">
+			<img src="images/hua30.jpg" style="position: absolute; top: 57%; left: 70%; width: 13%;"> 
+			<img src="images/jingji.jpg" style="position: absolute; top: 57%; left: 83%; width: 13%;">
+			<img src="images/hua5.jpg" style="position: absolute; top: 63%; left: 5%; width: 13%;">
+			<img src="images/hua10.jpg" style="position: absolute; top: 63%; left: 18%; width: 13%;">
+			<img src="images/hua15.jpg" style="position: absolute; top: 63%; left: 31%; width: 13%;">  
+			<img src="images/hua20.jpg" style="position: absolute; top: 63%; left: 44%; width: 13%;">
+			<img src="images/hua25.jpg" style="position: absolute; top:63%; left: 57%; width: 13%;">
+			<img src="images/hua30.jpg" style="position: absolute; top: 63%; left: 70%; width: 13%;"> 
+			<img src="images/jingji.jpg" style="position: absolute; top: 63%; left: 83%; width: 13%;">
+			<img src="images/hua5.jpg" style="position: absolute; top: 69%; left: 5%; width: 13%;">
+			<img src="images/hua10.jpg" style="position: absolute; top: 69%; left: 18%; width: 13%;">
+			<img src="images/hua15.jpg" style="position: absolute; top: 69%; left: 31%; width: 13%;">  
+			<img src="images/hua20.jpg" style="position: absolute; top: 69%; left: 44%; width: 13%;">
+			<img src="images/hua25.jpg" style="position: absolute; top:69%; left: 57%; width: 13%;">
+			<img src="images/hua30.jpg" style="position: absolute; top: 69%; left: 70%; width: 13%;"> 
+			<img src="images/jingji.jpg" style="position: absolute; top: 69%; left: 83%; width: 13%;">
+			
+			<img src="images/hua5.jpg" style="position: absolute; top: 75%; left: 5%; width: 13%;">
+			<img src="images/hua10.jpg" style="position: absolute; top: 75%; left: 18%; width: 13%;">
+			
+			
+			
+			
+			<div style="position: absolute;  top: 75%; left: 31%; width: 13%;height:6%; background: #333333;"></div>
+			
+			<img id="31"   src="images/hua15.jpg" style="position: absolute; top: 75%; left: 31%; width: 13%;">  
+			
+			
+			
+			<div style="position: absolute;  top: 75%; left: 44.5%; width: 12.5%;height: 6%; background: #333333;"></div>
+			
+			<div style="position: absolute;  top: 75%; left: 57.5%; width: 12.5%;height: 6%; background: #333333;"></div>
+			<button style="position: absolute; top: 75%; border: none; left: 70.5%; width: 25%; height: 6%; background: green;" onclick="buqian()">补签</button>
+			<!--<button style="position: absolute; top: 75%; border: none; left: 70.5%; width: 25%; height: 6%; background: green;" onclick="color()">补签</button>-->
+			<font style="position: absolute; top: 81%; left: 5%; color: white; font-family: '黑体'; font-size: 0.5em;">注：每月只能补签3次</font>
+		</div>
+		
+		<div class="tata">
+			<div class="ta1">
+				<img  src="images/hua5.jpg"  style="position: absolute; left: 10%; top: 21%; width: 25%; height: auto;">
+				<img src="images/fengshen.jpg" style="position: absolute; left: 65%; top: 21%; width: 25%; height: auto;">
+				<div class="tt1">
+					<div>
+						<font  style="position: absolute; top: -50%; left: 10%; width: 90%; display: inline-block; color: black; font-size: 0.3em;">连续签到15天</font>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="tata2">
+			<div class="ta2">
+				<img  src="images/hua20.jpg"  style="position: absolute; left: 10%; top: 21%; width: 25%; height: auto;">
+				<img src="images/jianpan.jpg" style="position: absolute; left: 65%; top: 21%; width: 25%; height: auto;">
+				<div class="tt2">
+					<div>
+						<font  style="position: absolute; top: -40%; left: 20%; width: 90%; display: inline-block; color: white; font-size: 0.5em;">连续签到28天</font>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<a href="74.html"><img src="images/saishi.jpg" style="position: absolute; left: 0%; top: 92.5%; width: 20%;"></a>
+		<a href=""><img src="images/zixun.jpg" style="position: absolute; left: 20%; top: 92.5%; width: 20%;"></a>
+		<a href="41.html"><img src="images/shangcheng.jpg" style="position: absolute; left: 40%; top: 92.5%; width: 20%;"></a>
+		<a href=""><img src="images/jingcai.jpg" style="position: absolute; left: 60%; top: 92.5%; width: 20%;"></a>
+		<a  href="5.html"><img src="images/wo.jpg" style="position: absolute; left: 80%; top: 92.5%; width: 20%;"></a>
+		
+		
+		
+		
+		
+		
+		
+	</body>
+</html>

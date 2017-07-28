@@ -1,0 +1,179 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<script src="js/jquery-3.1.1.min.js"></script>
+<title>9</title>
+<style>
+	*{margin: 0;padding: 0}
+	body{background-color: black;color: white;font-family: 微软雅黑}
+	i{width: 45px;height: 45px;padding: 20px;margin-top: 20%;border: 1px solid #1a1a1a;border-radius: 60px;color: white}
+	input::-webkit-input-placeholder{color: grey;font-size: 12px}
+	input::-moz-placeholder{color: grey;font-size: 12px}
+	input:-ms-input-placeholder{color: grey;font-size: 12px}
+	#top{text-align: center}
+	#back{position: absolute;left: 0;background-color: black;color: white;border: 0;font-size: 20px}
+	#title{position: relative; font-size: 16px;top: 12px;display: inline-block}
+	.mainli{position: relative;box-sizing: border-box;border-bottom: 2px solid white}
+	.mainli:active{background-color: grey}
+	.mainli:active.mainli>input[type=text]{background-color: grey}
+	.phli{width: 100%;height: 30px;line-height: 30px;background-color: white;color: black;font-size: 20px;text-align: center}
+	.item{position: absolute;left: 5%;bottom: 0;margin-bottom: 5px;font-size: 20px}
+	.info{position: absolute;left: 70%;bottom: 0;margin-bottom: 8px;color: grey;font-size: 12px}
+	.name{position: absolute;left: 62%; background-color: black;color: white;border: 0;font-size: 16px;text-align: center}
+	.write{position: absolute;left: 52%; background-color: black;color: white;border: 0;font-size: 16px;text-align: right}
+	.select{position: absolute;right: 5%;display: inline;font-size: 30px}
+	.btn{width: 20%;height: 30%;margin: 15% 0 0 20%;border: 0;border-radius: 15px;background-color: white;font-size: 20px}
+	#phtab{width: 100%;height: 95px;position: fixed;bottom: 0;background-color: black;z-index: 99;display: none}
+	#sextab{width: 90%;height: 62%;position: fixed;left: 5%;top: 20%;border-radius: 30px;background-color: #1a1a1a;z-index: 99;display: none}
+	#xztab{width: 100%;height: 60%;position: absolute;bottom: 0;background-color: #1a1a1a;display: none}
+	#xzbtn1,#xzbtn2{background-color: white;color: black;position: fixed;margin-top: 50px;border: 0;border-radius: 10px;font-size: 16px;font-weight: 600;padding: 9px 20px}
+	#xzbtn1{left: 5%}
+	#xzbtn2{right: 5%}
+	#xzimg{position: relative;top: 35%}
+	</style>
+	<script>
+function goBack()
+  {
+  window.history.back()
+  }
+</script>
+</head>
+
+<body>
+<div id="top">
+    <button id="back" onClick="goBack()'">&lt;</button>
+	<p id="title">个人信息</p>
+</div>
+<div id="main">
+	<ul id="mainul">
+		<li class="mainli">
+			<p class="item">昵 称</p>
+		    <input type="text" class="name" placeholder="必填　请输入">
+		</li>
+		<li class="mainli" id="phbtn">
+			<p class="item">头 像</p>
+		    <p class="info">必填</p>
+		    <p class="select">&gt;</p>
+		</li>
+		<li class="mainli" id="sexbtn">
+			<p class="item">性 别</p>
+	     	<p class="info" id="sexinfo">必填</p>
+		    <p class="select">&gt;</p>
+		</li>
+		<li class="mainli" onClick="window.location.href='12.html'">
+	     	<p class="item">修 改 密 码</p>
+		    <p class="info">必填</p>
+		    <p class="select">&gt;</p>
+		</li>
+		<li class="mainli" onClick="window.location.href='14.html'">
+			<p class="item">支 付 密 码</p>
+			<p class="info">必填</p>
+			<p class="select">&gt;</p>
+		</li>
+		<li class="mainli" onClick="window.location.href='15.html'">
+			<p class="item">手 机 号 绑 定</p>
+			<p class="info">必填</p>
+			<p class="select">&gt;</p>
+		</li>
+		<li class="mainli" id="xzbtn">
+			<p class="item">主 玩 游 戏</p>
+			<p class="info">必填</p>
+			<p class="select">&gt;</p>
+		</li>
+		<li class="mainli" onClick="window.location.href='17.html'">
+			<p class="item">所 在 地</p>
+			<p class="info">必填</p>
+			<p class="select">&gt;</p>
+		</li>
+		<li class="mainli">
+			<p class="item">QQ</p>
+			<input type="text" class="write">
+		</li>
+			<li class="mainli">
+			<p class="item">姓 名</p>
+			<input type="text" class="write" placeholder="必填　请输入姓名">
+		</li>
+		<li class="mainli">
+			<p class="item">邮 箱</p>
+			<input type="text" class="write" placeholder="必填　请输入邮箱">
+		</li>
+	</ul>
+</div>
+<div id="foot">
+	<button class="btn" onClick="window.location.href='6.html'">保存</button>
+	<button class="btn" onClick="window.location.href='5.html'">注销</button>
+</div>
+<div id="sextab">
+		<p style="font-size: 20px;font-family: 幼圆;text-align: center;margin-top: 10%">请选择性别</p>
+		<div style="margin: 20% 0 0 15%;float: left">
+		<i class="fa fa-mars fa-3x" style="background-color: #0166ff" value="男"></i>
+		<p style="text-align: center;margin-top: 5px">男</p>
+		</div>
+		<div style="margin: 20% 15% 0 0;float: right">
+		<i class="fa fa-mars fa-3x" style="background-color: #ff00fe;transform:rotate(180deg);-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);-moz-transform:rotate(180deg);-o-transform:rotate(180deg)" value="女"></i>
+		<p style="text-align: center;margin-top: 5px">女</p>
+		</div>
+	</div>
+<div id="phtab">
+	<ul>
+		<li class="phli" style="border-bottom: 1px solid black">拍照</li>
+		<li class="phli">从手机相册选择</li>
+		<li class="phli" style="margin-top: 4px">取消</li>
+	</ul>
+</div>
+<div id="xztab">
+	<button id="xzbtn1">取 消</button>
+	<button id="xzbtn2">确 定</button>
+    <img id="xzimg" src="images/16.jpg" width="100%" height="30%">
+</div>
+<script>
+	$("body").css({"height":$(window).height(),"width":$(window).width()}); 
+	$("#top").css({"height":$(window).height()*0.08,"width":$(window).width()}); 
+	$("#main").css({"height":$(window).height()*0.72,"width":$(window).width()});
+	$("#foot").css({"height":$(window).height()*0.2,"width":$(window).width()});
+	$("#mainul").css({"height":$("#main").height(),"width":$(window).width()});
+	$(".mainli").css({"height":$("#mainul").height()/11,"width":$(window).width()});
+	$("#back").css({"height":$("#top").height(),"width":$(window).width()*0.2});
+	$(".name").css({"height":$(".mainli").height()-2,"width":$(window).width()*0.35});
+	$(".write").css({"height":$(".mainli").height()-2,"width":$(window).width()*0.45});
+	
+	$("#phbtn").click(function(e){
+		$("#phtab").show();
+	$(document).one("click",function(){
+        $("#phtab").hide();
+      });
+	});
+	$("#phbtn").click(function(e){
+    e.stopPropagation();
+    });	
+	
+	$("#sexbtn").click(function(e){
+		$("#sextab").show();
+	$(document).one("click",function(){
+        $("#sextab").hide();
+      });
+	});
+	$("#sexbtn").click(function(e){
+    e.stopPropagation();
+    });
+	
+	$("#xzbtn").click(function(e){
+		$("#xztab").slideDown();
+	$(document).one("click",function(){
+        $("#xztab").slideUp();
+      });
+	});
+	$("#xzbtn").click(function(e){
+    e.stopPropagation();
+    });	
+	
+	$("i").click(function(){
+	$("#sexinfo").text($(this).attr('value'));
+	$("#sexinfo").css({"color":"white","font-size":"16px"});
+	});
+	</script>
+</body>
+</html>

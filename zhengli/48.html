@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>赛事</title>
+<style>
+    *{
+	  margin: 0;padding: 0;
+	}
+	body{
+	  margin:0px;
+	  width:100%;
+	  height:100%;
+	}
+	a{
+	  text-decoration: none;
+	}
+    .wrap{
+      margin-left: 0px;
+      margin-top: 0px;
+    }
+    /*清浮动---clearfix*/
+    .clearfix {
+      *zoom: 1;
+    }
+    .clearfix:after {
+      content: "";
+      clear: both;
+      display: block;
+      height: 0;
+      font-size: 0;
+      visibility: hidden;
+    }
+    .blist {
+      border:1px solid #d9d9d9;
+	  border-color: transparent;
+      width: 100%;
+      height: 32px;
+    }
+    .blist li:first-child{
+      border-left: none;
+    }
+    .blist li{
+       list-style: none;
+       width: 24.2%;
+       height: 32px;
+       border-left:1px solid white;
+       font-size: 16px;
+       font-family: "";
+       line-height: 32px;
+       text-align: center;
+		color:white;
+       float: left;
+       /*鼠标样式改变为一个手*/
+       cursor: pointer;
+       /*字体免选中*/
+       -webkit-user-select: none;
+  
+    }
+    .blsit-list{
+      width: 100%;
+    }
+    .blsit-list li{
+       list-style: none;
+       width: 100%;
+       border-bottom-color: transparent;
+       height: 100%;
+       border-top: none;
+	   color:white;
+    }
+    .wrap .blist li.active{
+      font-weight: bold;
+      color: white;
+      border-bottom: 2px solid red;
+      position: relative;
+      top:-1px;
+      height: 31px;
+    }
+    .blsit-list li:first-child{
+      display: block;
+    }
+    .blsit-list li{
+     display: none;
+    }
+	table{
+		margin-left: 5%;
+		margin-right: 5%;
+		border: 0.5px solid white;
+		border-left: 0;
+		border-right: 0;
+	}
+	td{
+		text-align: center;
+	}
+	p{
+		text-align: center;
+		margin-top: 3%;
+		font-size: 16px;
+	}
+	
+    .baoming{
+		position: absolute;
+		width: 94%;
+		height: 28%;
+		top: 43.3%;
+		left: 3%;
+	    z-index:9999;
+		background: #333333;
+		font-weight: 1000;
+		font-family:"仿宋";
+		display: none;
+	}
+	.quxiao{
+		position:relative;
+		top:0;left: 91.5%;
+		width:43px;
+		font-size: 40px;
+	}
+	.third{
+		top: 13.58%;
+		height: 5.89%;
+	}
+	.hzwzry{
+		width: 100%;
+	}
+	.renshu{font-size: 12px;position: absolute;left: 86%;top:17.5%;height: 3%;width: 5%;}
+	.sqzd,.cjzd{
+		position: absolute;
+		top:40%;
+		height:40px;
+		width: 120px;
+		border-radius: 10px;
+		background: #FFFFFF;
+		font-size: 26px;
+		font-weight:1000;
+		font-family: "微软雅黑";
+		outline: none;
+	}
+	.sqzd{
+		left: 53%;
+	}
+	.cjzd{
+		left: 5%;
+	}
+	
+	.hui{
+		width: 100%;
+		background-color: #686868;
+		height: 10%;
+		padding: 0;
+
+	}
+	.b1,.b2{
+		width: 28px;
+		height: 28px;
+		border-radius: 14px;
+		margin: 0;
+	}
+	.t{
+		width: 62%;
+		background-color: gray;
+		height: 30px;
+		margin-top: 1%;
+		padding: 0;
+		font-size: 23px;
+		
+	}
+	.f{
+		height: 30px;
+		position: fixed;
+		right: 10px;
+		margin-top: 3px;
+	}
+	
+
+</style>
+<script>
+	function go(){
+		alert("关注成功!");
+	}
+	</script>
+<script src="js/jquery-1.11.3.min.js"></script>
+</head>
+
+<body style="background:black;">
+<div style="width:100%;height:50px;display:inline-block;">
+	<li style="width:20%;height:50px;float:left;padding-top: 6px;padding-left: 5%;">
+ 	 		<a onclick="fanhui()" style="font-size: 32px;color:white;text-decoration: none;">＜</a>
+        </li>
+        <li align="center" style="width:70%;height:50px;padding-top: 6px;">
+        <img src="images/14.PNG" style="width:40px;height:50px;">
+        </li>
+</div>
+<div class="wrap">
+       <ul class="blist clearfix" style="background:black;">
+         <li class="active">赛事信息</li>
+         <li>规则</li>
+         <li>对阵表</li>
+         <li>聊天室</li>
+       </ul>
+       <ul class="blsit-list">
+         <li>
+         	<div style="width:100%;height:10px;">
+        	
+        </div>
+        <div style="width:90%;height:180px;border:2px solid white;margin:0px auto;border-radius:25px;">
+        	<div style="width:100%;height:40px;">
+        		<img src="images/17.png" style="width:150px;height:40px;padding-top: 4px;padding-left: 19px;">
+        	</div>
+        	<div style="width:97%;height:50px;background: #424242;margin: 0px auto;">
+        		<div style="text-align: center;">
+        			<p style="font-size: 18px;font-family: '楷体';">杭州电子科技大学</p>
+        			<a style="text-decoration:underline;font-size: 18px;font-family: '楷体'">杭州王者荣耀争霸赛</a>
+        		</div>
+        	</div>
+        	<div style="width:100%;height:40px;">
+        		<img src="images/18.png" style="width:150px;height:40px;padding-top: 4px;padding-left: 19px;">
+        	</div>
+        	<div style="width:97%;height:30px;background:#424242;margin:0px auto;">
+        		<div style="text-align: center;">
+        			<p style="font-size: 14px;padding-top: 10px;">2017年7月1日至8月1日截止</p>
+        		</div>
+        	</div>
+        </div>
+        <div style="width:100%;height:20px;">
+        	
+        </div>
+        <div style="width:90%;height:190px;border:2px solid white;margin:0px auto;border-radius:25px;">
+        	<div style="width:100%;height:40px;">
+        		<img src="images/19.png" style="width:150px;height:40px;padding-top: 4px;padding-left: 19px;">
+        	</div>
+        	<div style="width:97%;height:140px;background: #424242;margin: 0px auto;">
+        		<div style="width:99%;height:21px;border:2px solid white;border-color:transparent;border-bottom-color: white;">
+        			<span style="float:left;padding-left: 20%;">排名</span>
+        			<span style="float:right;padding-right: 20%;">奖金</span>
+        		</div>
+        		<div style="width:99%;height:20px;border:2px solid white;border-color:transparent;border-bottom-color: white;">
+        			<span style="float:left;padding-left: 20%;">1</span>
+        			<span style="float:right;padding-right: 20%;">5000</span>
+        		</div>
+        		<div style="width:99%;height:20px;border:2px solid white;border-color:transparent;border-bottom-color: white;">
+        			<span style="float:left;padding-left: 20%;">2</span>
+        			<span style="float:right;padding-right: 20%;">3000</span>
+        		</div>
+        		<div style="width:99%;height:20px;border:2px solid white;border-color:transparent;border-bottom-color: white;">
+        			<span style="float:left;padding-left: 20%;">3</span>
+        			<span style="float:right;padding-right: 20%;">1000</span>
+        		</div>
+        		<div style="width:99%;height:20px;border:2px solid white;border-color:transparent;border-bottom-color: white;">
+        			<span style="float:left;padding-left: 18%;">4-8</span>
+        			<span style="float:right;padding-right: 20.5%;">500</span>
+        		</div>
+        	</div>
+        </div>
+        <div style="width:100%;height:18px;padding-top: 15px;font-size: 16px;">
+        		<p style="padding-left: 10%;float:left;">赛事说明：</p>
+        	</div>
+         </li>
+         <li>
+         	<div style="border:1px solid;border-color:white;border-radius:20px;margin-left:3%;margin-right:3%;margin-top:3%;height:500px;">
+         		<img src="images/20.PNG" style="margin-left:8%;margin-top:4%;width:32%;height:6%">
+         		<div style="margin-left:3%;margin-right:3%;background-color:#404040;height:70px;padding-top: 6%">
+         			<table width="90%" border="1" cellspacing="0" cellpadding="0">					  
+  					    <tr>
+						  <td style="border-left:0;">Bo1</td>
+						  <td>5v5</td>
+						  <td style="border-right:0;">八强</td>
+						</tr>
+						<tr>
+						  <td style="border-left:0;">Bo3</td>
+						  <td>5v5</td>
+						  <td style="border-right:0;">四强</td>						
+						</tr>
+					</table>
+				</div>  
+        	    <img src="images/21.PNG" style="margin-left:8%;margin-top:2%;width:32%;height:6%">  
+        	    <div style="margin-left:3%;margin-right:3%;background-color:#373737;height:40px;">
+        	    	<span style="margin-left:3%;font-size:16px;color:white;">赛事以征兆模式</span>
+        	    </div> 	
+        	    <img src="images/22.PNG" style="margin-left:8%;margin-top:4%;width:32%;height:6%">	
+        	    <div style="margin-top:0; margin-left:3%;margin-right:3%;background-color:#404040;height:200px;">
+        	    	<p>32进16(Bo1)</p>
+        	    	<p>时间：10点至12点</p>
+        	    	<p>16进8(Bo1)</p>
+        	    	<p>时间：13点至14点</p>
+        	    	<p>8进4(Bo1)</p>
+        	    	<p>时间：15点至16点</p>
+        	    </div>
+         	</div>     	
+         </li>
+         <li><img style="width: 100%; height: 100%" src="images/27.png"></li> 
+         <li>
+         	<div class="third">
+			<img src="images/23.png" alt="#" class="hzwzry" />
+			<div class="renshu">36888</div>
+			</div>
+		<div style="height:457.8px;">
+		<img src="images/24.png" style="width:90%;height:12%;">
+		<img src="images/25.png" style="width:90%;height:12%;">
+		</div>
+		<div class="hui">
+				<img src="images/x.PNG" alt="#" class="b1" //>
+				<img src="images/y.PNG" alt="#"class="b2" />
+				<textarea name="kuang1" class="t" maxlength="30"style="height: 4.6%;" rows="1"></textarea>		
+				<img src="images/z.PNG" alt="#" class="f" />
+        </div>
+      
+       
+       </li>
+       </ul>
+    </div>
+<div style="position: fixed;bottom: 0px; width:100%;height:6%;background:#666363;border:1px solid ;border-color: transparent;border-top-color:white;">
+<ul>
+<li style="width:33%;height:40px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;">
+       <div style="width:140px;margin:10px auto;">
+       <a href="" style="color:white;font-size: 16px;">报名人数(20/30)
+       </a></div>
+</li>
+<li style="width:30%;height:40px;display: inline;float:left;border:1px solid ;border-color: transparent;border-right-color:white;"><div style="width:32px;margin:10px auto;">
+       <a onclick="go()" style="color:white;font-size: 16px;">关注
+       </a></div>
+</li>
+<li style="width:33%;height:40px;display: inline;float:left;border:1px solid ;border-color: transparent;"><div style="width:64px;margin:10px auto;">
+       <a href="javascript:void(0);" onClick="baoming()" style="color:white;font-size: 16px;">立即报名
+       </a></div>
+</li>
+</ul>	
+</div>
+<div class="baoming" id="baoming">
+	<div class="quxiao" onclick="quxiao()">×</div>
+	<button class="cjzd" onclick="cj()">创建战队</button>
+	<button class="sqzd" onclick="sq()">申请战队</button>
+</div>
+
+
+<script type="text/javascript">
+$(function(){
+   $(".blist").on("click","li",function(){
+	 // 设index为当前点击
+	 var index = $(this).index();
+	 // 点击添加样式利用siblings清除其他兄弟节点样式
+	 $(this).addClass("active").siblings().removeClass("active");
+	 // 同理显示与隐藏
+	 $(this).parents(".wrap").find(".blsit-list li").eq(index).show().siblings().hide();
+   })
+})
+function baoming(){
+	document.getElementById('baoming').style.display='block';
+}
+function quxiao(){
+	document.getElementById('baoming').style.display='none';
+}
+function cj(){
+	window.location.href = "52.html"
+}
+function sq(){
+	window.location.href = "59.html"
+}
+function fanhui(){
+	window.history.go(-1);
+}	
+</script>
+</body>
+</html>

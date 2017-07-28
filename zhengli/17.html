@@ -1,0 +1,639 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="js/jquery-3.1.1.min.js"></script>
+<title>17</title>
+<style>
+	*{margin: 0;padding: 0}
+	body{background-color: black;color: white;font-family: 微软雅黑}
+	#top{text-align: center}
+	#back{position: absolute;left: 0;background-color: black;color: white;border: 0;font-size: 20px}
+	#title{position: relative; font-size: 16px;top: 12px;display: inline-block}
+	ul{list-style: none}
+	#main1 li>p:first-child,.shiul li>p:first-child{position: absolute;left: 8%}
+	.box>p:first-child{display: inline;position: absolute;left: 8%}
+	.shiul li>p:first-child{display: inline}
+	.item{background-color: #1a1a1a;border: none}
+	#main1 li{height: 20%;box-sizing: border-box;border-bottom: 1px solid white}
+	#main2 li{width: 100%}
+	.box{position: relative;box-sizing: border-box;border-bottom: 1px solid white}
+	.shiul{display: none}
+	.shiul li{box-sizing: border-box;border-bottom: 1px solid white;background-color: #1a1a1a}
+	.select{position: absolute;right: 10px;display: inline;font-size: 20px}
+	</style>
+</head>
+
+<body>
+<div id="top">
+    <button id="back" onClick="window.location.href='9.html'">&lt;</button>
+	<p id="title">所在地</p>
+</div>
+<ul id="main1">
+	<li class="item">
+	<p>直辖市</p>
+	</li>
+	<li>
+	<p>北京</p>
+	<p class="select">&gt;</p>
+	</li>
+	<li>
+	<p>上海</p>
+	<p class="select">&gt;</p>
+	</li>
+	<li>
+	<p>重庆</p>
+	<p class="select">&gt;</p>
+	</li>
+	<li>
+	<p>天津</p>
+	<p class="select">&gt;</p>
+	</li>
+</ul>
+<ul id="main2">
+	<li class="item">
+	    <div class="box">
+	      <p>其他省份</p>
+		</div>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>河南</p>
+	    <p class="select">&gt;</p>
+	    </div>
+	    <ul class="shiul">
+			<li>
+				<p>郑州</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>开封</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>洛阳</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>河北</p>
+	    <p class="select">&gt;</p>
+	    </div>
+	    <ul class="shiul">
+			<li>
+				<p>石家庄</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>唐山</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>秦皇岛</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>山西</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>内蒙古</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>辽宁</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>吉林</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>黑龙江</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>浙江</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>安徽</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>福建</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>江西</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>山东</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>湖北</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>湖南</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>广东</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>广西</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>海南</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>贵州</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>云南</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>四川</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>陕西</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>甘肃</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>青海</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>西藏</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>新疆</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>香港</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>澳门</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+	<li class="shengli">
+        <div class="box">
+	    <p>台湾</p>
+	    <p class="select">&gt;</p>
+	    </div>
+		<ul class="shiul">
+			<li>
+				<p>太原</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>大同</p>
+				<p class="select">&gt;</p>
+			</li>
+			<li>
+				<p>阳泉</p>
+				<p class="select">&gt;</p>
+			</li>
+		</ul>
+	</li>
+</ul>
+<script>
+	$("body").css("width",$(window).width()); 
+	$("#top").css({"height":$(window).height()*0.08,"width":$(window).width()}); 
+	$("#back").css({"height":$("#top").height(),"width":$(window).width()*0.2});
+	$("#main1").css({"height":$(window).height()*0.22,"width":$(window).width()});
+    $(".box").css({"height":$("#main1 li").height(),"width":$(window).width()});
+	$(".shiul li").css({"height":$("#main1 li").height(),"width":$(window).width()});
+	$(".box").click(function(){
+		$(this).next().slideToggle();
+		if($(this).next().css("display")=="none"){
+		     $(this).children(".select").text(">");
+		}
+		else{
+			 $(this).children(".select").text("v");
+		}
+	});
+	</script>
+</body>
+</html>

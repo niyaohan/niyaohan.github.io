@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>32</title>
+
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+        }
+        .top{
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            font-size: 55px;
+        }
+        .touxiang{
+            width: 100%;
+            height: 280px;
+            background-color: #333;
+        }
+        .touxiang img{
+            width: 100%;
+            height: 100%;
+        }
+        .p-1{
+            font-size: 40px;
+            top: 11%;
+            left: 31%;
+            position: absolute;
+            background-color: transparent;
+        }
+        .p-2{
+            font-size: 25px;
+            top: 15%;
+            left: 30%;
+            position: absolute;
+             background-color: transparent;
+        }
+        .touxiang-button{
+            background-color: white;
+            color: black;
+            width: 160px; height: 70px;
+            font-size: 30px;
+            position: absolute;
+            left: 74%;
+            top: 18%;
+        }
+        
+        .haoyou{
+            text-align: center;
+        }
+        .haoyou img{
+            height: 90px;
+            margin-top: 10px;
+        }
+        .left{
+            width: 33.3%;
+            float: left;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+        .middle{
+            width: 33.3%;
+            float: left;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+        .right{
+            width: 33.3%;
+            float: left;
+            height: 120px;
+            margin-bottom: 20px;
+        }
+        .main li{
+            list-style: none;
+            border-bottom:1px solid white;
+            padding-left: 50px;
+            margin-top: 22px;
+            font-size: 35px;
+        }
+        .main p{
+            font-size: 25px;
+            float: right;
+            margin-right: 30px;
+        }
+        .foot{
+            bottom: 0;
+            position: absolute;
+            height: 100px;
+            text-align: center;
+            width: 100%;
+            font-size: 40px;
+        }
+        .foot-1{
+            width: 33.3%;
+            float: left;
+            margin-top: 20px;
+        }
+        .foot-2{
+            width: 33.3%;
+            margin-top: 20px;
+            float: left;
+        }
+        .foot-3{
+            width: 33.3%;
+            margin-top: 20px;
+            float: left;
+        }
+        
+        #sextab{
+            width: 90%;
+            height: 45%;
+            position: absolute;
+            margin: 0 5%;
+            border-radius: 25px;
+            background-color: #1a1a1a;
+            z-index: 99;
+            display: none;
+        }
+        .lalala{
+            list-style: none;
+            border-bottom:1px solid white;
+            padding-left: 50px;
+            margin-top: 25px;
+            font-size: 40px;
+        }
+        .alalal{
+            background-color: white;
+            color: black;
+            width: 80%;
+            margin: 50px 10%;
+            height: 22%;
+            font-size: 70px;
+            border-radius: 25px;
+        }
+        .zhifubao{
+            height: 10%;
+            background-color: #ff3300;
+            font-size:30px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="top">
+        <p style="margin-top: 30px">个人资料</p>
+    </div>
+
+    <div class="touxiang">
+        <img src="images/background.png">
+<!--         <img src="image2/email.png" style="top: 8%; left: 90%;"> -->
+        <button class="touxiang-button" id="sexbtn">提现</button>
+        <div id="sextab">
+            <div class="zhifubao">支付宝提现</div>
+            <ul>
+                <li class="lalala"><input type="text" style="border:none;outline:medium;width: 90%;height: 100%;font-size: 35px;" class="write" placeholder="          请输入支付宝账号" ><span style="font-size: 36px;float: right;">></span></li>
+                <li class="lalala"><input type="text" style="border:none;outline:medium;width: 90%;height: 100%;font-size: 35px;" class="write" placeholder="          请输入姓名" ><span style="font-size: 36px;float: right;">></span></li>
+                <li class="lalala"><input type="text" style="border:none;outline:medium;width: 90%;height: 100%;font-size: 35px;" class="write" placeholder="          请输入金额" ><span style="font-size: 36px;float: right;">></span></li>
+            </ul>
+            <p style="margin-top: 10px;">注：每次提现金额不能低于50元，24小时内到账</p>
+            <button class="alalal" id="alalal">申请提现</button>
+        </div>
+        <img src="images/email.png" onClick="window.location.href='7.html'" style="top: 8%; left: 88%;width: 10%;height: 5%;position: absolute;background-color: transparent;">
+        <p class="p-1">黑大帅</p>
+        <p class="p-2">个性签名：不服来战！</p>
+    </div>
+
+    <div class="haoyou">
+        <div class="left">
+            <img onClick="window.location.href='9.html'" src="images/xinxi.png" />
+            <p onClick="window.location.href='9.html'">个人信息</p>
+        </div>
+        <div class="middle">
+            <img onClick="window.location.href='18.html'" src="images/haoyou.png" />
+            <p onClick="window.location.href='18.html'">我的好友</p>
+        </div>
+        <div class="right">
+            <img onClick="window.location.href='25.html'" src="images/zijin.png" />
+            <p onClick="window.location.href='25.html'">充值</p>
+        </div>
+    </div>
+
+    <div class="main">
+        <ul>
+            <li onClick="window.location.href='29.html'">VIP会员<p>></p></li>
+            <li onClick="window.location.href='30.html'">资金变动<p>></p></li>
+            <li>我要竞猜<p>></p></li>
+            <li onClick="window.location.href='31.html'">商城兑换记录<p>></p></li>
+            <li onClick="window.location.href='32-34.html'">我的战况<p>></p></li>
+            <li>我的战队<p>></p></li>
+            <li onClick="window.location.href='36.html'">我的赛事<p>></p></li>
+            <li>我的公会<p>></p></li>
+            <li>任务<p>></p></li>
+            <li>绑定游戏账号<p>></p></li>
+            <li onClick="window.location.href='35.html'">我的背包<p>></p></li>
+        </ul>
+    </div>
+
+    <div class="foot">
+        <div class="foot-1"><p>公会</p></div>
+        <div class="foot-2"><p onClick="window.location.href='59.html'">战队</p></div>
+        <div class="foot-3"><p>我</p></div>
+    </div>
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+        $("#sexbtn").click(function(){
+            $("#sextab").show();
+        $("#alalal").click(function(){
+            $("#sextab").hide();
+          });
+        });
+
+
+
+        $("body").css({"height":$(window).height(),"width":$(window).width()}); 
+        $("#main").css({"height":$(window).height()*0.19,"width":$(window).width()});
+
+
+
+
+</script>
+</body>
+</html>

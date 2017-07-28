@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>3.5</title>
+		<style>
+			*{margin:0px;padding:0px;border:0px}
+			body{width:100%;height:100%;border:0px}
+			img{width:100%;height:100%}
+			div{width:100%;position:absolute;border:0}
+			
+			.all{top:0%;left:0%;hieght:100%;width:100%;background:black;}
+			.fenlei{position:absolute;top:1.7%;left:4.5%;height:5%;width:10%;background:transparent;}
+			.shop{position:absolute;top:1%;left:45%;height:6%;width:10%;background:transparent;}
+			.duihuan{position:absolute;top:32%;left:65%;height:5%;width:25%;background:transparent;}
+			.saishi{position:absolute;top:93%;left:0%;height:7%;width:20%;background:transparent;}
+			.zixun{position:absolute;top:93%;left:20%;height:7%;width:20%;background:transparent;}
+			.shop1{position:absolute;top:93%;left:40%;height:7%;width:20%;background:transparent;}
+			.jincai{position:absolute;top:93%;left:60%;height:7%;width:20%;background:transparent;}
+			.me{position:absolute;top:93%;left:80%;height:7%;width:20%;background:transparent;}
+		</style>
+		
+		<script>
+			function ale(str)
+			{
+				alert(str);
+			}
+			function ale1(){
+				window.location.assign("74.html");
+			}
+			function ale2(){
+				window.location.assign("41.html");
+			}
+			function ale3(){
+				window.location.assign("5.html");
+			}
+			function duihuan()
+			{
+				var text = "请支付  \t186封神币  \n请输入支付密码";
+				var r = prompt(text);
+				if(r == null || r == "")
+				{
+					alert("您未输入密码!");
+				}else
+				{
+					alert("支付成功");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class = all>
+			<img src = "3.5.1.jpg" />
+			<input type = "button" class= "fenlei" onclick = "ale('分类')"/>
+			<input type = "button" class = "shop" onclick = "ale('商城')"/>
+			<input type = "button" class = "duihuan" onclick = "duihuan()"/>
+			<input type = "button" class = "saishi" onclick = "ale1()"/>
+			<input type = "button" class = "zixun" onclick = "ale('资讯')"/>
+			<input type = "button" class = "shop1" onclick = "ale2()"/>
+			<input type = "button" class = "jincai" onclick = "ale('竞猜')"/>
+			<input type = "button" class = "me" onclick = "ale3()"/>
+		</div>
+	</body>
+</html>

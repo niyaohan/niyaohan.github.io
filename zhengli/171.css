@@ -1,0 +1,6 @@
+body {background-color: black}
+th{color: white;font-size: 50px;text-align: center;}
+tr{color: white;font-size: 50px;text-align: center;}
+#t tr td{font-size: 20px; width: 25%;}
+.r{float:right}
+.l{float:left}

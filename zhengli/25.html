@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>15.jpg</title>
+	<style>
+		*{margin:0px;padding:0px;border:0px}
+		body{width:100%;height:100%;border:0px}
+		img{width:100%;height:100%}
+		a{text-decoration:none}
+		div{width:100%;position:absolute;border:0}
+		
+		.top{top:0%;left:0%;height:8%;background:black}
+		.fanhui{top:20%;left:20%;height:100%;width:5%;color:white;background:black;font-size:40px;}
+		.chongzhi{top:5%;left:40%;height:8%;width:10%;color:white;background:black;font-size:40px}
+		.detail{position:absolute;top:2%;left:70%;height:100%;width:20%;color:white;background:black;font-size:40px}
+		
+		.photo{top:8%;left:0%;height:35%;}
+		.first{position:absolute;top:48%;left:6.6%;height:21%;width:24%;background:transparent}
+		.second{position:absolute;top:48.5%;left:38%;height:21%;width:24%;background:transparent}
+		.third{position:absolute;top:48.5%;left:69.5%;height:21%;width:24%;background:transparent}
+		.forth{position:absolute;top:76.4%;left:6.5%;height:21%;width:24%;background:transparent}
+		.fifth{position:absolute;top:76.4%;left:38%;height:21%;width:24%;background:transparent}
+		.sixth{position:absolute;top:76.4%;left:69.5%;height:21%;width:24%;background:transparent}
+		
+		.bottom{top:43%;left:0%;height:57%;background:#242424}
+		.text{position:absolute;top:15%;left:5%;height:12%;width:90%;background:black;font-size:20px;color:white;border-radius:25px;-webkit-user-modify: read-write-plaintext-only; }
+		.submit{position:absolute;top:40%;left:20%;height:10%;width:60%;background:red;font-size:20px;color:white}
+	</style>
+	
+	<script>
+		function return_button()
+		{
+			window.history.back();
+		}
+		function detail_button()
+		{
+			alert("您还没有购买记录!");
+		}
+		function money()
+		{
+			var r = confirm("确认支付")
+			if(r == true)
+			{
+				alert("支付成功");
+			}else
+			{
+				alert("取消支付");
+			}
+		}
+		function pay()
+		{
+			var mymoney = document.getElementById("money").value;
+			if(mymoney == null || mymoney == "")
+			{
+				alert("请输入要支付的金额!");
+				money.focus();
+				return false;
+			}
+			else
+			{
+				alert("支付成功!");
+				location.reload();
+				return true;
+			}	
+		
+		}
+	</script>
+
+</head>
+
+<body>
+	<div class = top>
+		<input type = "submit" class = fanhui value = "＜" onclick = "return_button()" />
+		<div class = chongzhi>充值</div>
+		<input type = "submit" class = detail value = "账户明细" onClick="window.location.href='27-28.html'"/>
+	</div>
+	
+	<div class = photo>
+		<img src = "images/15.jpg" alt = "#"/>
+		<input type = "submit" class = first value = "" onclick = "money()" />
+		<input type = "submit" class = second value = "" onclick = "money()" />
+		<input type = "submit" class = third value = "" onclick = "money()" />
+		<input type = "submit" class = forth value = "" onclick = "money()" />
+		<input type = "submit" class = fifth value = "" onclick = "money()" />
+		<input type = "submit" class = sixth value = "" onclick = "money()" />
+	</div>
+	
+	<div class = bottom>
+		
+			<input type = "text" class = text placeholder = "请输入其它金额                     封神币"  id = "money" name = "money" onkeyup="value=value.replace(/[^\d]/g,'')"/>	
+			<input type = "submit" class = submit value = "购买"  onClick="window.location.href='26.html'"/>
+	
+	</div>
+	
+</body>
+</html>

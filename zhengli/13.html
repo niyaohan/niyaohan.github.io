@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="js/jquery-3.1.1.min.js"></script>
+<title>13</title>
+<style>
+	*{margin: 0;padding: 0}
+	body{background-color: black;color: white;font-family: 微软雅黑;text-align: center}
+	input[type="text"]{position: absolute;background-color: transparent;color: white;font-size: 20px;border: 0}
+	input::-webkit-input-placeholder{color: grey;font-size: 20px}
+	input::-moz-placeholder{color: grey;font-size: 20px}
+	input:-ms-input-placeholder{color: grey;font-size: 20px}
+	#back{position: absolute;left: 0;background-color: black;color: white;border: 0;font-size: 20px}
+	#title{position: relative; font-size: 16px;top: 12px;display: inline-block}
+	.list{border-top: 1px solid grey;border-bottom: 1px solid grey}
+	#finish{position: absolute;background-color: white;color: black;border: 0;border-radius: 10px;font-size: 18px}
+	</style>
+</head>
+
+<body>
+<div id="top">
+	<button id="back" onClick="window.location.href='12.html'">&lt;</button>
+	<p id="title">修改密码</p>
+</div>
+<div id="main">
+	<div class="list">
+		<input type="text" class="text" placeholder="请输入新密码">
+	</div>
+	<div class="list">
+		<input type="text" class="text" placeholder="请再次输入新密码">
+    </div>
+    <button id="finish" onClick="window.location.href='9.html'">完成</button>
+</div>
+<script>
+	$("body").css({"height":$(window).height(),"width":$(window).width()}); 
+	$("#top").css({"height":$(window).height()*0.08,"width":$(window).width()}); 
+	$("#back").css({"height":$("#top").height(),"width":$(window).width()*0.2});
+	$("#main").css({"height":$(window).height()*0.08,"width":$(window).width()}); 
+	$(".list").css({"height":$(window).height()*0.06,"width":$(window).width(),"marginTop":$(window).height()*0.02}); 
+	$(".text").css({"height":$(".list").height(),"width":$(window).width()*0.5,"left":$(window).width()*0.15}); 	$("#finish").css({"height":$(window).height()*0.06,"width":$(window).width()*0.8,"marginLeft":$(window).width()*-0.4,"marginTop":$(window).height()*0.2}); 
+	</script>
+</body>
+</html>

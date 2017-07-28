@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>创建战队</title>
+		<style>
+			*{margin:0px;padding:0px;border:0px}
+			body{width:100%;height:100%;border:0px}
+			img{width:100%;height:100%}
+			div{width:100%;position:absolute;border:0}
+			
+			.top{top:0%;left:0%;height:8%;background:black;}
+			.fanhui{position:absolute;top:28%;left:5%;width:10%;background:black;color:white;font-size:35px;outline:none;}
+			.build{top:30%;left:48%;width:28%;background:black;color:white;font-size:30px;}
+			
+			.infor{top:8%;left:0%;height:28%;background:black;}
+			.text{position:absolute;top:10%;left:6%;width:88%;height:70%;color:white;background:#696969;font-size:25px;border-radius:25px;outline: none;}
+			.num{top:83%;left:80%;width:10%;height:12%;background:black;color:white;font-size:25px;}
+			.num1{top:83%;left:84%;width:10%;height:12%;background:black;color:white;font-size:25px;}
+			
+			.bottom{top:36%;left:0%;height:64%;background:black;}
+			.renshu{top:1%;left:0.4%;width:99.2%;height:6%;background:black;border:1px solid;border-color:white}
+			.renshu1{top:15%;left:12%;height:80%;width:23%;color:white;background:black;font-size:20px;}
+			.button_one{position:absolute;top:0%;left:80%;height:100%;width:12%;color:white;background:black;font-size:28px;outline:none;}
+			.place{top:7%;left:0.4%;width:99.2%;height:6%;background:black;border:1px solid;border-color:white}
+			.place1{top:15%;left:12%;height:80%;width:23%;color:white;background:black;font-size:20px;}
+			.button_two{position:absolute;top:0%;left:80%;height:100%;width:12%;color:white;background:black;font-size:28px;outline:none;}
+			.area{top:13%;left:0.4%;width:99.2%;height:6%;background:black;border:1px solid;border-color:white}
+			.area1{top:15%;left:12%;height:80%;width:23%;color:white;background:black;font-size:20px;}
+			.button_three{position:absolute;top:0%;left:80%;height:100%;width:12%;color:white;background:black;font-size:28px;outline:none;}
+			.tel{top:19%;left:0.4%;width:99.2%;height:6%;background:black;border:1px solid;border-color:white}
+			.tel1{top:15%;left:12%;height:80%;width:23%;color:white;background:black;font-size:20px;}
+			.txt{position:absolute;top:0%;left:75%;height:100%;width:18%;color:white;background:black;font-size:20px;outline:none;}
+			.public{top:25%;left:0.4%;width:99.2%;height:6%;background:black;border:1px solid;border-color:white}
+			.yes{position:absolute;top:30%;left:15%;}
+			.yes1{top:15%;left:19%;width:12%;height:80%;background:black;color:white;font-size:20px;}
+			.no{position:absolute;top:30%;left:70%;}
+			.no1{top:15%;left:73%;width:16%;height:80%;background:black;color:white;font-size:20px;}
+			.next{position:absolute;top:50%;left:10%;width:80%;height:8%;color:black;background:white;font-size:30px;border-radius:18px;outline:none;}
+		
+			.one{top:68%;left:0%;height:32%;background:grey;display: none;}
+			.queren{position:absolute;top:16%;left:65%;height:15%;width:22%;background:white;color:black;font-size:20px;border-radius:10px;outline:none;}
+			.quxiao{position:absolute;top:16%;left:12%;height:15%;width:22%;background:white;color:black;font-size:20px;border-radius:10px;outline:none;}
+			.one_1{left:37%;top:40%;height:18%;width:28%;background:grey;font-size:30px;}
+			.congratulate{left:38%;top:15%;height:25%;width:32%;background:white;font-size:25px;border-radius: 10px;text-align:center}
+			.finish{position:absolute;left:42%;top:65%;height:18%;width:25%;background:white;font-size:25px;border-radius:15px;text-align:center;outline:none;}
+		</style>
+		<script>
+			function fanhui()
+			{
+				window.location.href = "52.html";
+			}
+			function change_num(num)
+			{
+				var n = num.value.length;
+				document.getElementById("num").innerHTML = n.toString();
+			}
+			function queren(id)
+			{
+				document.getElementById(id).style.display = "none"
+			}
+			function quxiao(id)
+			{
+				document.getElementById(id).style.display = "none"
+			}
+			function choose(id)
+			{
+				document.getElementById(id).style.display = "block"
+			}
+			function finish(id)
+			{
+				window.location.href = "index.html";
+			}
+		</script>
+	</head>
+	<body>
+		<div class = "top">
+			<input type = "button" class = "fanhui" value = "＜" onclick = "fanhui()"/>
+			<div class = "build">创建战队</div>
+		</div>
+		<div class = "infor">
+			<textarea class = "text" placeholder = " 请输入战队简介" maxlength="60" cols="15" rows="8" onkeyup = "change_num(this)"></textarea>
+			<div class = "num" id = "num">0</div>
+			<div class = "num1">/60</div>
+		</div>
+		<div class = "bottom">
+			<div class = "renshu">
+				<div class = "renshu1">战队人数</div>
+				<input type = "button" class = "button_one" value = "＞" onclick = "choose('one')"/>
+			</div>
+			<div class = "place">
+				<div class = "place1">擅长位置</div>
+				<input type = "button" class = "button_two" value = "＞" onclick = "choose('two')"/>
+			</div>
+			<div class = "area">
+				<div class = "area1">比赛区</div>
+				<input type = "button" class = "button_three" value = "＞" onclick = "choose('three')"/>
+			</div>
+			<div class = "tel">
+				<div class = "tel1">联系电话</div>
+				<input type = "text" class = "txt" placeholder = "请输入" />
+			</div>
+			<div class = "public">
+				<form>
+					<input type = "radio" class = "yes" name = "public" checked = "checked" />
+					<div class = "yes1">公开</div>
+					<input type = "radio" class = "no" name = "public"/>
+					<div class = "no1">不公开</div>
+				</form>
+			</div>
+			<input type = "button" class = "next" value = "下一步" onclick = "choose('finish')"/>
+		</div>
+		<div class = "one" id = "one">
+			<input type = "button" class = "queren" value = "确认" onclick = "queren('one')"/>
+			<input type = "button" class = "quxiao" value = "取消" onclick = "quxiao('one')"/>
+			<div class = "one_1">战队人数</div>
+		</div>
+		<div class = "one" id = "two">
+			<input type = "button" class = "queren" value = "确认" onclick = "queren('two')"/>
+			<input type = "button" class = "quxiao" value = "取消" onclick = "quxiao('two')"/>
+			<div class = "one_1">擅长位置</div>
+		</div>
+		<div class = "one" id = "three">
+			<input type = "button" class = "queren" value = "确认" onclick = "queren('three')"/>
+			<input type = "button" class = "quxiao" value = "取消" onclick = "quxiao('three')"/>
+			<div class = "one_1">比赛区</div>
+		</div>
+		<div class = "one" id = "finish">
+			<div class = "congratulate">恭喜您  </br>      创建成功</div>
+			<input type = "button" class = "finish" value = "完成" onclick = "finish('finish')"/>
+		</div>
+	</body>
+</html>

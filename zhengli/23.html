@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<title>13</title>
+	<style type="text/css">
+		body{
+			width:100%;
+			height:100%;
+		}
+		*{
+			padding: 0;
+			margin: 0;
+			background-color: #1a1a1a;
+			color: white;
+		}
+
+		/*顶部*/
+
+		.top{
+			width: 100%;
+			height: 100px;
+		}
+               .top-main{
+			margin-top: 35px;
+			text-align: center;
+		}
+		.top-main p{
+			font-size: 40px;
+		}
+		.goback{
+			float: left;
+			margin-left: 30px;
+		}
+		.goback img{
+			height: 30px;
+		}
+		.goback p{
+			font-size: 23px;
+		}
+
+		/*头部*/
+
+		.head{
+			width: 100%;
+			height: 80px;
+			background-color:  #808080;
+			text-align: center;
+			padding-top: 10px;
+		}
+		.head p{
+			background-color:  #808080;
+			font-size: 35px;
+		}
+		.head p img{
+			margin-top: 15px;
+			float: right;
+			height: 40px;
+			margin-right: 30px;
+		}
+
+		/*主要聊天内容*/
+
+		.talk1{
+			margin-top: 50px;
+			margin-left: 20px;
+			height: 100px;
+			width: 100%;
+		}
+		.talk1 img{
+			float: left;
+			height: 70px;
+		}
+		.duihua1{
+			background-color: white;
+			width: 50%;
+			height:70px;
+			float: left;
+			color: black;
+			font-size: 50px;
+		}
+		.talk2{
+			height: 100px;
+			margin-top: 20px;
+			margin-right: 20px;
+		}
+		.talk2 img{
+			float: right;
+			height: 70px;
+		}
+		.duihua2{
+			background-color: white;
+			width: 30%;
+			height:70px;
+			float: right;
+			color: black;
+			font-size: 50px;
+		}
+
+		/*尾部信息发送*/
+
+		.foot{
+			width: 100%;
+			height: 120px;
+			bottom: -35px;
+			position: absolute;
+			background-color: #404040;
+		}
+		.foot img{
+			background-color: #404040;
+			float: left;
+			margin-top: 10px;
+		}
+		.foot input{
+			width: 66%;
+			background-color: #737373;
+			margin-top: 15px;
+			margin-left:5px;
+			height: 65px;
+			float: left;
+		}
+		.foot button{
+			background-color: #a6a6a6;
+			color: black;
+			height: 75px;
+			font-size: 28px;
+			width: 15%;
+			margin-top: 15px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+	</style>
+	<script>
+	function goBack(){
+		window.history.back();
+	}
+	</script>
+</head>
+<body>
+
+<!-- 顶部 -->
+
+<div class="top">
+    <div class="top-main">
+        <div class="goback">
+            <img onClick="goBack()" src="images/goback.png">
+            <p onClick="window.location.href='goBack()">返回</p>
+        </div>
+	    <p>聊天</p>
+	</div>
+</div>
+
+<!-- 头部 -->
+
+<div class="head">
+	<p>黑大帅
+	<img src="images/email1.png"/>
+	</p>
+</div>
+
+<!-- 主要聊天内容 -->
+
+<div class="main">
+	<div class="talk1">
+		<img src="images/tou.png">
+	    <img src="images/1xing.png">
+		<div class="duihua1">
+			你什么段位啊？
+		</div>
+	</div>
+	<div class="talk2">
+		<img src="images/tou.png">
+		<img src="images/9xing.png">
+		<div class="duihua2">
+	             我王者！	
+		</div>
+	</div>
+</div>
+
+<!-- 尾部信息发送 -->
+
+<div class="foot">
+	<img src="images/fasong.png">
+	<input type="text" name="text">
+	<button>发送</button>
+</div>
+
+</body>
+</html>
